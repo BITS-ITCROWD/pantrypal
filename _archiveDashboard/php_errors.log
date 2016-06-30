@@ -1,0 +1,655 @@
+[15-Jun-2016 11:51:03 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 8
+[15-Jun-2016 11:51:03 UTC] PHP Stack trace:
+[15-Jun-2016 11:51:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:51:03 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/byrons_dashboard/index.php:8
+[15-Jun-2016 11:51:03 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 9
+[15-Jun-2016 11:51:03 UTC] PHP Stack trace:
+[15-Jun-2016 11:51:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:51:03 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/byrons_dashboard/index.php:9
+[15-Jun-2016 11:51:03 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 12
+[15-Jun-2016 11:51:03 UTC] PHP Stack trace:
+[15-Jun-2016 11:51:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:51:03 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/index.php:12
+[15-Jun-2016 11:51:03 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 13
+[15-Jun-2016 11:51:03 UTC] PHP Stack trace:
+[15-Jun-2016 11:51:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:51:03 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/index.php:13
+[15-Jun-2016 11:51:03 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 16
+[15-Jun-2016 11:51:03 UTC] PHP Stack trace:
+[15-Jun-2016 11:51:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:51:03 UTC] PHP   2. mysqli_num_rows() /home/ubuntu/workspace/byrons_dashboard/index.php:16
+[15-Jun-2016 11:57:59 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 8
+[15-Jun-2016 11:57:59 UTC] PHP Stack trace:
+[15-Jun-2016 11:57:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:57:59 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/byrons_dashboard/index.php:8
+[15-Jun-2016 11:57:59 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 9
+[15-Jun-2016 11:57:59 UTC] PHP Stack trace:
+[15-Jun-2016 11:57:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:57:59 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/byrons_dashboard/index.php:9
+[15-Jun-2016 11:57:59 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 12
+[15-Jun-2016 11:57:59 UTC] PHP Stack trace:
+[15-Jun-2016 11:57:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:57:59 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/index.php:12
+[15-Jun-2016 11:57:59 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 13
+[15-Jun-2016 11:57:59 UTC] PHP Stack trace:
+[15-Jun-2016 11:57:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:57:59 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/index.php:13
+[15-Jun-2016 11:57:59 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 16
+[15-Jun-2016 11:57:59 UTC] PHP Stack trace:
+[15-Jun-2016 11:57:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:57:59 UTC] PHP   2. mysqli_num_rows() /home/ubuntu/workspace/byrons_dashboard/index.php:16
+[15-Jun-2016 11:58:07 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 8
+[15-Jun-2016 11:58:07 UTC] PHP Stack trace:
+[15-Jun-2016 11:58:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:58:07 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/byrons_dashboard/index.php:8
+[15-Jun-2016 11:58:07 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 9
+[15-Jun-2016 11:58:07 UTC] PHP Stack trace:
+[15-Jun-2016 11:58:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:58:07 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/byrons_dashboard/index.php:9
+[15-Jun-2016 11:58:07 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 12
+[15-Jun-2016 11:58:07 UTC] PHP Stack trace:
+[15-Jun-2016 11:58:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:58:07 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/index.php:12
+[15-Jun-2016 11:58:07 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 13
+[15-Jun-2016 11:58:07 UTC] PHP Stack trace:
+[15-Jun-2016 11:58:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:58:07 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/index.php:13
+[15-Jun-2016 11:58:07 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 16
+[15-Jun-2016 11:58:07 UTC] PHP Stack trace:
+[15-Jun-2016 11:58:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 11:58:07 UTC] PHP   2. mysqli_num_rows() /home/ubuntu/workspace/byrons_dashboard/index.php:16
+[15-Jun-2016 11:58:33 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 8
+[15-Jun-2016 12:01:09 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 12
+[15-Jun-2016 12:01:09 UTC] PHP Stack trace:
+[15-Jun-2016 12:01:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:01:09 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/index.php:12
+[15-Jun-2016 12:01:09 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 13
+[15-Jun-2016 12:01:09 UTC] PHP Stack trace:
+[15-Jun-2016 12:01:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:01:09 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/index.php:13
+[15-Jun-2016 12:01:09 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/index.php on line 16
+[15-Jun-2016 12:01:09 UTC] PHP Stack trace:
+[15-Jun-2016 12:01:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:01:09 UTC] PHP   2. mysqli_num_rows() /home/ubuntu/workspace/byrons_dashboard/index.php:16
+[15-Jun-2016 12:03:42 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/byrons_dashboard/index.php on line 19
+[15-Jun-2016 12:03:42 UTC] PHP Stack trace:
+[15-Jun-2016 12:03:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:04:10 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/byrons_dashboard/index.php on line 19
+[15-Jun-2016 12:04:10 UTC] PHP Stack trace:
+[15-Jun-2016 12:04:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:06:35 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/byrons_dashboard/index.php on line 19
+[15-Jun-2016 12:06:35 UTC] PHP Stack trace:
+[15-Jun-2016 12:06:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:07:55 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/byrons_dashboard/index.php on line 19
+[15-Jun-2016 12:07:55 UTC] PHP Stack trace:
+[15-Jun-2016 12:07:55 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:09:01 UTC] PHP Parse error:  syntax error, unexpected '$servername' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/byrons_dashboard/config.php on line 3
+[15-Jun-2016 12:09:01 UTC] PHP Stack trace:
+[15-Jun-2016 12:09:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:09:16 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/byrons_dashboard/index.php on line 19
+[15-Jun-2016 12:09:16 UTC] PHP Stack trace:
+[15-Jun-2016 12:09:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:10:22 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/byrons_dashboard/index.php on line 19
+[15-Jun-2016 12:10:22 UTC] PHP Stack trace:
+[15-Jun-2016 12:10:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:10:46 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/byrons_dashboard/index.php on line 20
+[15-Jun-2016 12:10:46 UTC] PHP Stack trace:
+[15-Jun-2016 12:10:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:24:37 UTC] PHP Fatal error:  Call to a member function prepare() on a non-object in /home/ubuntu/workspace/byrons_dashboard/index.php on line 19
+[15-Jun-2016 12:24:37 UTC] PHP Stack trace:
+[15-Jun-2016 12:24:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/index.php:0
+[15-Jun-2016 12:28:07 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'demo' in 'where clause'' in /home/ubuntu/workspace/byrons_dashboard/index.php:21
+Stack trace:
+#0 /home/ubuntu/workspace/byrons_dashboard/index.php(21): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/byrons_dashboard/index.php on line 21
+[15-Jun-2016 12:36:04 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:36:29 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:36:30 UTC] PHP Parse error:  syntax error, unexpected ',' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:37:37 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:37:38 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:37:39 UTC] PHP Parse error:  syntax error, unexpected '{' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:38:35 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:38:36 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:39:00 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:39:01 UTC] PHP Parse error:  syntax error, unexpected '>' in /home/ubuntu/workspace/byrons_dashboard/index.php on line 24
+[15-Jun-2016 12:39:25 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:25 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:25 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:25 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:25 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:25 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:25 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:25 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:46 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:46 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:46 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:46 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:46 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:46 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:46 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:46 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:46 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:46 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:46 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:46 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:46 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:46 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:46 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:46 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:47 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:47 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:47 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:47 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:48 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:48 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:48 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:48 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:48 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:48 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:48 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:48 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:48 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:48 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:48 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:48 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:48 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:48 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:48 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:48 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:48 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:48 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:48 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:48 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:48 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:48 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:48 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:48 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:48 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:48 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:49 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:49 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:49 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:49 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:49 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:49 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:49 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:49 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:49 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:49 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:49 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:49 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:49 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:49 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:49 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:49 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:49 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:49 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:49 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:49 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:49 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:49 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:49 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:49 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:49 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:49 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:49 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:49 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:49 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:49 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:49 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:49 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:50 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:50 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:50 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:50 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:50 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:50 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:50 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:50 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:50 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:50 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:50 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:50 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:50 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:50 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:50 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:50 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:51 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:51 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:51 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:51 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:51 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:51 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:51 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:51 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:51 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:51 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:51 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:51 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:51 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:51 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:51 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:51 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:51 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:51 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:51 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:51 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:51 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:51 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:51 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:51 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:51 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:51 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:52 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:52 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:52 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:52 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:53 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:53 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:53 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:53 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:53 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:53 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:53 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:53 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:53 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:53 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:53 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:53 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:39:53 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:39:53 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:53 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:53 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:39:53 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:39:53 UTC] PHP Stack trace:
+[15-Jun-2016 12:39:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:39:53 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:39:53 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:32 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:32 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:32 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:32 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:33 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:33 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:33 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:33 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:34 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:34 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:34 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:34 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:34 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:34 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:34 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:34 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:34 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:34 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:34 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:34 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:34 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:34 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:34 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:34 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:34 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:34 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:34 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:34 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:34 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:34 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:34 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:34 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:34 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:35 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:35 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:35 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:35 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:35 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:35 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:35 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:35 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:35 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:35 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:35 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:35 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:35 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:35 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:35 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:35 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:35 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:35 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:35 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:35 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:35 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:35 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:35 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:35 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:36 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:36 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:36 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:36 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:36 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:36 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:36 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:36 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:36 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:36 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:36 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:36 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:36 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:36 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:36 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:36 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 12:40:36 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 12:40:36 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:36 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:36 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 12:40:36 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 12:40:36 UTC] PHP Stack trace:
+[15-Jun-2016 12:40:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 12:40:36 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:2
+[15-Jun-2016 12:40:36 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 13:05:50 UTC] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 13:05:50 UTC] PHP Stack trace:
+[15-Jun-2016 13:05:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 13:05:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:4
+[15-Jun-2016 13:05:50 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 13:05:50 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 13:05:50 UTC] PHP Stack trace:
+[15-Jun-2016 13:05:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 13:05:50 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:4
+[15-Jun-2016 13:05:50 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9
+[15-Jun-2016 13:06:07 UTC] PHP Warning:  mysql_query() expects parameter 1 to be string, object given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 7
+[15-Jun-2016 13:06:07 UTC] PHP Stack trace:
+[15-Jun-2016 13:06:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 13:06:07 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:4
+[15-Jun-2016 13:06:07 UTC] PHP   3. mysql_query() /home/ubuntu/workspace/byrons_dashboard/session.php:7
+[15-Jun-2016 13:06:07 UTC] PHP Warning:  mysql_fetch_array() expects parameter 1 to be resource, null given in /home/ubuntu/workspace/byrons_dashboard/session.php on line 9
+[15-Jun-2016 13:06:07 UTC] PHP Stack trace:
+[15-Jun-2016 13:06:07 UTC] PHP   1. {main}() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:0
+[15-Jun-2016 13:06:07 UTC] PHP   2. include() /home/ubuntu/workspace/byrons_dashboard/dashboard.php:4
+[15-Jun-2016 13:06:07 UTC] PHP   3. mysql_fetch_array() /home/ubuntu/workspace/byrons_dashboard/session.php:9

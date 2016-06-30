@@ -1,0 +1,9 @@
+25/6 Started trying to connect to database for recipes page
+26/6 With the help of Luke's code the database is now connecting, search 
+     function is also working for recipe name.  
+27/6-28/6 Working on presenting results as pages.  Page numbers are OK but 
+     data not displaying
+     Added footer.php and sidebar.php to page.
+29/6 Moved testing for pages to mark_testing.php
+     Looking into main content panels and headers/sidebars from bootstrap
+     
