@@ -1,6 +1,7 @@
 <?php
 //DB config
-define('_HOST_NAME_', 'localhost'); 
+define('_HOST_NAME_', 'localhost');
+//define('_USERNAME_', 'melbnetworks');
 define('_USERNAME_', 'it_crowd');
 define('_DB_PASSWORD', ''); 
 define('_DB_NAME_', 'it_crowd');

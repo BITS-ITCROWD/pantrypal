@@ -23,13 +23,22 @@ Jane Geard 28/06/2016: Created sidebar page with basic button links.
     
 </head>
 <body>
-  <div id = "sidebar">
-    
+  <!-- Mark - Playing with bootstrap layout -->
+  <div class="col-sm-3">
+  <!--<div id = "sidebar">-->
+  <!-- Mark - Playing with bootstrap layout -->  
     <?php 
     session_start();
     
     ?>
-    
+      <!-- Search bar that links to recipes.php by Mark -->    
+      <form  method="post" action="recipes.php?go"  id="searchform"> 
+        <input  type="text" name="searchEntry" placeholder="  Search Recipes.."> 
+        <button type="submit" class="btn btn-default" name="submit">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </form> 
+      
       <div class="btn-group-vertical" role="group" aria-label="...">
         <button type="button" class="btn btn-default navbar-btn">
            <a href="favourites.php">View Favourite Recipes</a></button>

@@ -1,30 +1,59 @@
 <!DOCTYPE html>
+<?php
+//adds the header
+include_once "header.php";
+include_once "sidebar.php";
+session_start();
+if(!isset($_SESSION['login_success'])){ //if login in session is not set
+    header("Location: index.php");
+}
+?>
+  
+<!--header.php-->
+<head>
+    
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    
+    <!--link to Bootstrap css stylesheets-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">; 
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">;
+	
+	 
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
-<html lang="en">
-
-
-	<?php
+  <script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+    $( "#anim" ).change(function() {
+      $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
+    });
+  });
+  </script>
+  
+  <?php
 		
 		include("config.php");
-      //adds the header
-      include_once "header.php";
+      
       //adds the iterator to build the ingredient and recipe table
       include_once("recursiveIterator.php");
 		
 		//declare the recipeID number from the search results
 		$rid = $_GET['rid'];
 		
-		echo '<link href="css/lightbox.css" rel="stylesheet">';
-		echo '<link href="css/calendar.css" type="text/css" rel="stylesheet">';
-		
 	?>
+	
+</head>
+
+
+	
 
 <body>
 	
-	
-	
-	<!-- Header -->
-	
+		<!-- Header -->
+		
+		
+
 	<!-- End Header -->
 	
 	<!-- Side Bar -->
@@ -36,8 +65,6 @@
 	   <!-- GET THE INGREDIENTS FOR THE RECIPEID -->
 	
 	<?php
-	
-	
 	
    	echo "Your Recipe ID is: ".$rid.".";
    	
@@ -102,88 +129,48 @@
       
 
 
-	<!-- link that opens popup -->
+<!-- Trigger/Open The Modal -->
+<button id="lukemyBtn">Open Modal</button>
 
-	<!-- Trigger/Open The Modal -->
-	<button id="myBtn">Open Modal</button>
-	
-	<!-- The Modal -->
-	<div id="myModal" class="modal">
-	
-	  <!-- Modal content -->
-	  <div class="modal-content">
-	    <span class="close">x</span>
+<!-- The Modal -->
+<div id="lukemyModal" class="lukemodal">
 
-<!-- borrowed from https://jqueryui.com/datepicker/#animation on 28/6 -->
+  <!-- Modal content -->
+  <div class="lukemodal-content">
+    <span class="lukeclose">x</span>
+    
+ <!-- borrowed from https://jqueryui.com/datepicker/#animation on 28/6 -->
 
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script>
-  $(function() {
-    $( "#datepicker" ).datepicker();
-    $( "#anim" ).change(function() {
-      $( "#datepicker" ).datepicker( "option", "showAnim", $( this ).val() );
-    });
-  });
-  </script>
+<form action="addtomealplan.php" method="post">
+		<p>Date: <input type="text" id="datepicker" size="30" name="date"></p>
  
-<p>Date: <input type="text" id="datepicker" size="30"></p>
- 
-<p>Animations:<br>
-  <select id="anim">
-    <option value="show">Show (default)</option>
-    <option value="slideDown">Slide down</option>
-    <option value="fadeIn">Fade in</option>
-    <option value="blind">Blind (UI Effect)</option>
-    <option value="bounce">Bounce (UI Effect)</option>
-    <option value="clip">Clip (UI Effect)</option>
-    <option value="drop">Drop (UI Effect)</option>
-    <option value="fold">Fold (UI Effect)</option>
-    <option value="slide">Slide (UI Effect)</option>
-    <option value="">None</option>
-  </select>
-</p>
+					<p>Meal:<br>
+                 <select id="Meal" name="meal">
+                   <option value="Breakfast">Breakfast (default)</option>
+                   <option value="Lunch">Lunch</option>
+                   <option value="Dinner">Dinner</option>
+                   <option value="Dessert">Dessert</option>
+                   <option value="MorningSnack">Morning Snack</option>
+                   <option value="AfternoonSnack">Afternoon Snack</option>
+                 </select>
+               </p> 
+     <input type="submit" value="Submit">          
+</form>
+    
+  </div>
 
-	  </div>
-	
-	</div>
-
-
-
-
-	<p>
-		<a href="luketemp_testpage.php">Back to Recipe ID selector.php</a>
-	</p>
-	
-	
-	
-	<!-- SINGLERECIPE CONTENTS END HERE -------------------------------------------------------------------------------------- -->
-		
-			
-	<!-- Footer -->
-			
-		
-	<!-- End Footer -->
-
-
-	<!-- scripts go here -->
-	
-		<script src="//code.jquery.com/jquery.js"></script>
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-		<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
+</div>
+	 
+	 
 <script>
 // Get the modal
-var modal = document.getElementById('myModal');
+var modal = document.getElementById("lukemyModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("lukemyBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("lukeclose")[0];
 
 // When the user clicks on the button, open the modal 
 btn.onclick = function() {
@@ -203,6 +190,24 @@ window.onclick = function(event) {
 }
 
 </script>
+
+
+
+	  </div>
+	
+	</div>
+
+	<p>
+		<a href="luketemp_testpage.php">Back to Recipe ID selector.php</a>
+	</p>
+	
+	<!-- SINGLERECIPE CONTENTS END HERE -------------------------------------------------------------------------------------- -->
+		
+			
+	<!-- Footer -->
+			
+		
+	<!-- End Footer -->
 	
 	</body>
 	
