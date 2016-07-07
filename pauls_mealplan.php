@@ -86,46 +86,47 @@ function getMondaysDate($givenDate){
 }
 
 
-?>
 
 
 
-   <!--  determine if first time to page -->
+
+   // determine if first time to page
 
  
 
-   <!--  draw table containing controls -->
-   <h2>Meal Planner</h2>
-   <div id='redips-drag'>
-   <table style='width:70%'>
-      <tr>
-         <td class='redips-mark'>back</td>
-         <td class='redips-mark'>Please select new date:<p>Date: <input type='text' id='datepicker' value='2016-07-04'></p></td>
-         <td class='redips-mark'>reset this week</td>
-         <td class='redips-mark'>copy this weeks to another week</td>
-         <td class='redips-mark'>print out for my fridge</td>
-         <td class='redips-trash'>trash bin</td>
-         <td class='redips-mark'>next</td>
-      </tr>
-   </table>
+   // draw table containing controls
+   echo "<h2>Meal Planner</h2>";
+   echo "<div id='redips-drag'>";
+   echo "<table style='width:70%'>";
+   echo "<tr>";
+   echo "<td class='redips-mark'>back</td>";
+   echo "<td class='redips-mark'>Please select new date:<p>Date: <input type='text' id='datepicker' value='2016-07-04'></p></td>";
+   echo "<td class='redips-mark'>reset this week</td>";
+   echo "<td class='redips-mark'>copy this weeks to another week</td>";
+   echo "<td class='redips-mark'>print out for my fridge</td>";
+   echo "<td class='redips-trash'>trash bin</td>";
+   echo "<td class='redips-mark'>next</td>";
+   echo "</tr>";
+   echo "</table>";
    
    
-   <!--  draw the current week planner details -->
-   <!--  table Day Headings -->
-   <table style='width:70%'>
-      <tr>
-         <td class='redips-mark'>MEAL</td>
-         <td class='redips-mark'>Mon</td>
-         <td class='redips-mark'>Tue</td>
-         <td class='redips-mark'>Wed</td>
-         <td class='redips-mark'>Thu</td>
-         <td class='redips-mark'>Fri</td>
-         <td class='redips-mark'>Sat</td>
-         <td class='redips-mark'>Sun</td>
-      </tr>
+   // draw the current week planner details
+   // table Day Headings
+   
+   echo "<table style='width:70%'>";
+   echo "<tr>";
+   echo "<td class='redips-mark'>MEAL</td>";
+   echo "<td class='redips-mark'>Mon</td>";
+   echo "<td class='redips-mark'>Tue</td>";
+   echo "<td class='redips-mark'>Wed</td>";
+   echo "<td class='redips-mark'>Thu</td>";
+   echo "<td class='redips-mark'>Fri</td>";
+   echo "<td class='redips-mark'>Sat</td>";
+   echo "<td class='redips-mark'>Sun</td>";
+   echo "</tr>";
    
 
-<?php   
+   
    // construct the sql
    $mealDay = [Breakfast,Lunch,Dinner];
    $mealTime = [B,L,D];

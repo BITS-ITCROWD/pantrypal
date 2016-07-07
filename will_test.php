@@ -1,80 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<?php session_start?>;
+<?php session_start?>
 <head>
    <title> Add ingredients </title>
 </head>
 
 <body>
- 
+
+<?php 
+   include_once("header.php");
+   include("config.php"); 
+   include("recursiveIterator.php");
+?>
+
+<h3>Ingridents Shopping List</h3>
+<p></p
+
+
+<form action="submit_list.php" method="post">
+
+<table style="width:30%">
+   <tr>
+      <th>Ingredient</th>
+      <th>Add to List</th>
+   </tr>
+
 <?php 
 
-// Connection to DB and iterating through to get ingredient items
-
-include("config.php"); 
-include("recursiveIterator.php");
-
-$query = $db->prepare("SELECT mainIngredients FROM Ingredient WHERE recipeNumber IN (SELECT recipeNumber 
-                     FROM meal_planner WHERE mealDate == '2016-06-29' )
-                     VALUES (:mainIngredients)");
-
-// $ingredients ->bindParam('mainIngredients', $ingredient);
-
-$query->execute();
-
-$result = mysql_query($query);
-$row = mysql_fetch_array($result);
-$shoppingList = array();
-
-while ($row = mysql_fetch_array($res)) 
-{
-   $row->qty=1;
-   $shoppinglist[] = $row['ingredient'];
-}
-
-$_SESSION['ingredient'] = $shoppinglist;
-
-$ingredientsDisplay = "";
-$i = 0;
-
-foreach ($_SESSION['ingredient'] as $each_item)
-{
-   $item = $each_item['ingredient'];
-   $quantity = $each_item["qty"];
-   
-   $ingredientsDisplay .= '<tr>';
-   $ingredientsDisplay .= '<td>' . $item . '</td>';
-   $ingredientsDisplay .= '<td>' . $quantity . '</td>';
-   $ingredientsDisplay .= '</tr>';
-
-   $i++;
-   
-}
-
-echo '<table width="100%" border="1" cellspacing="0" cellpadding="10">';
-echo '<tr>';
-echo '<td width="30%" bgcolor="#dde0e4"><strong>Ingredient</strong></td>';
-echo '<td width="15%" bgcolor="#dde0e4"><strong>Quantity</strong></td>';
-echo '</tr> '; 
-
-echo '$ingredientsDisplay';
-
-
-// $result = $query->setFetchMode(PDO::FETCH_ASSOC); 
-//     foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) { 
-//     }
-
-
-// echo "<table>";
-// echo "<tr>
-//          <th>Ingredient</th><th></th>
-//       </tr>";
-
-
-
+foreach ($db->query("SELECT mainIngredients FROM ingredient WHERE recipeNumber IN 
+                        (SELECT recipeNumber FROM meal_planner WHERE mealDate = '2016-06-29')") as $row)
+                     {
+                        echo '<tr>';
+                           $ingredient = $row ['mainIngredients'];
+                           echo "<td>$ingredient</td>";
+                           echo "<td><input type='checkbox' value = $ingredient></input></td>";
+                        echo '</tr>';
+                     }
 
 ?>
-   
+
+</table>
+
+</form>   
 </body>
 
 </html>

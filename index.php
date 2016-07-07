@@ -34,6 +34,7 @@ do on layout.
 			$results = $records->fetch(PDO::FETCH_ASSOC);
 			if($results > 0){
 				$_SESSION['login_success'] = $results['username'];
+				$_SESSION['login_userid'] = $results['ID'];
 				header('location:dashboard.php');
 				exit;
 			}else{
