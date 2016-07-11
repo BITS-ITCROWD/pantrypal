@@ -1,0 +1,4 @@
+ID	mealTime	mealDescription	Comments
+1	B	Breakfast	NULL
+3	D	Dinner	NULL
+2	L	Lunch	NULL

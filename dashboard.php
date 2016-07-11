@@ -18,7 +18,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
     <!--  <h1><?php echo 'Welcome '.$_SESSION['login_success']; ?> </h1> added to the header-->
        <h2><a href = "session_dump.php">View Session</a></h2>
       <h2><a href = "logout.php">Sign Out</a></h2>
-      <h2><a href="lukeingredients.php">Luke's test area for single recipe page</a></h2>
+      <h2><a href="luketest_singlerecipe.php">Luke's test area for single recipe page</a></h2>
    </body>
 
 <?php

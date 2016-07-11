@@ -39,6 +39,8 @@ Jane Geard 28/06/2016: Created sidebar page with basic button links.
         </button>
       </form> 
       
+      <!--button links-->
+      
       <div class="btn-group-vertical" role="group" aria-label="...">
         <button type="button" class="btn btn-default navbar-btn">
            <a href="favourites.php">View Favourite Recipes</a></button>

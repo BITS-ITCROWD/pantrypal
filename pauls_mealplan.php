@@ -13,7 +13,38 @@
       $userID = $_SESSION['login_userid'];
    }
 
+   // create the sql and retrieve data
+   $query = "SELECT * FROM meal_planner WHERE userID ='".$userID."' order by mealDate, mealTime";
+   // test for a result
+   $result = $db->query($query);
+   if ($result === FALSE){
+      die(mysql_error());
+   }
+   
+   // place the data into an array
+   $row_array = array();
+   foreach ($result as $key=>$row){
+      $contructed_row ="";
+      foreach($row as $index=>$value){
+         // this will eliminate the duplicated row and seperate the values with a pipe
+         if (!is_string($index)){   
+            $seperator = "|";
+            $contructed_row .= $value.$seperator;
+         }
+      }
+      // build the array
+      array_push($row_array,$contructed_row);
+   }
+   // write the array to a SESSION variable
+   $_SESSION['MP'] = $row_array;
+   var_dump($_SESSION['MP']);
+   $Monday = getMondaysDate(date('Y-m-d'));
+   echo $Monday;
+   $mealDay = [Breakfast,Lunch,Dinner];
+   $mealTime = [B,L,D];
+
 ?>
+
 
 <head>
    <title>Meal Planner</title>
@@ -23,12 +54,30 @@
    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
+   <!-- datepicker script-->
    <script>
      $(function() {
-       $( "#datepicker" ).datepicker();
+      $( "#datepicker" ).datepicker({dateFormat: 'dd/mm/yy'});
      });
    </script>
+   
+   
+   <script>
+     $(document).ready(function(){
+         $("#datepicker").change(function(){
+            var new_date = this.value;
+            $Monday = getMondaysDate(new_date);
+            alert(new_date);
+            
+      });
+       
+     });
+   
+   </script>
+
+
+
+
 
 </head>
 
@@ -48,27 +97,7 @@
 
 <?php
 
-// function will create and return the detail of the row from the sql result. $daytemp is indexed from 1 to 7 for each weekday (Monday=1 etc)
-function getMealRow($result){
-   $daytemp ="";
-   foreach ($result as $res) {
-      //var_dump($res);
-      $dIndex = date('N',strtotime($res["mealDate"]));
-      
-      for($col=1; $col<=7; $col++) {
-         if($col == $dIndex) {
-            //echo "if".$col.", ";
-            $daytemp[$col] = "<td><div class='redips-drag'> Recipe No: ".$res["recipeNumber"]." ".$res["userNote"]."</div></td>";
-         }
-         elseif (strlen($daytemp[$col]) <= 9) {
-            //var_dump($daytemp[$col]);
-            //echo "else" .$col.", ";
-            $daytemp[$col] = "<td></td>";
-         }
-      }
-   }
-   return $daytemp; 
-}
+// FUNCTIONS
 
 // determine and return the date of the last Monday
 function getMondaysDate($givenDate){
@@ -90,22 +119,24 @@ function getMondaysDate($givenDate){
 
 
 
-   // determine if first time to page
+// START
 
- 
-
-   // draw table containing controls
+  // draw table containing controls
+   $displayDate = date('d/m/Y',strtotime($Monday));
+   
    echo "<h2>Meal Planner</h2>";
+   echo "<form id='form_planner' method='post' action=".$_SERVER['PHP_SELF'].">";
    echo "<div id='redips-drag'>";
    echo "<table style='width:70%'>";
    echo "<tr>";
-   echo "<td class='redips-mark'>back</td>";
-   echo "<td class='redips-mark'>Please select new date:<p>Date: <input type='text' id='datepicker' value='2016-07-04'></p></td>";
-   echo "<td class='redips-mark'>reset this week</td>";
-   echo "<td class='redips-mark'>copy this weeks to another week</td>";
-   echo "<td class='redips-mark'>print out for my fridge</td>";
+   echo "<td class='redips-mark'><input type='submit' class='button' value='back' name='back'/></td>";
+   echo "<td class='redips-mark'>Please select new date:<p>Date: <input type='text' id='datepicker' value='$displayDate'</p></td>";
+   echo "<td class='redips-mark'><input type='submit' class='button' value='reset' name='reset'/></td>";
+   echo "<td class='redips-mark'><input type='submit' class='button' value='copy to another week' name='copy'/></td>";
+   echo "<td class='redips-mark'><input type='submit' class='button' value='print planner' name='print'/></td>";
+   echo "<td class='redips-mark'><input type='submit' class='button' value='save' name='save'/></td>";
    echo "<td class='redips-trash'>trash bin</td>";
-   echo "<td class='redips-mark'>next</td>";
+   echo "<td class='redips-mark'><input type='submit' class='button' value='next' name='next'/></td>";
    echo "</tr>";
    echo "</table>";
    
@@ -124,48 +155,59 @@ function getMondaysDate($givenDate){
    echo "<td class='redips-mark'>Sat</td>";
    echo "<td class='redips-mark'>Sun</td>";
    echo "</tr>";
-   
 
-   
-   // construct the sql
-   $mealDay = [Breakfast,Lunch,Dinner];
-   $mealTime = [B,L,D];
-   // set the from & to dates for the sql - the previous monday to sunday
-   $dFrom = getMondaysDate(date('Y-m-d'));
-   $dTo = strtotime('+6 day',strtotime($dFrom));
-   $dTo = date('Y-m-d',$dTo);
-   
-   echo "from: ".$dFrom." to: ".$dTo;
-   
+   // construct the row
    for ($x=0; $x< sizeof($mealDay); $x++){
-      $result = $db->query("SELECT mealDate,recipeNumber,userNote FROM meal_planner WHERE userID ='".$userID."' 
-      and mealTime ='".$mealTime[$x]."' and mealDate >= '".$dFrom."' and mealDate <= '".$dTo."' order by mealDate");
-      //var_dump($result);
-      echo "<tr>";
-      echo "<td class='redips-mark'>".$mealDay[$x]."</td>";
+         echo "<tr>";
+   echo "<td class='redips-mark'>".$mealDay[$x]."</td>";
+      $daytemp ="";
+      foreach ($row_array as $row) {
+         $row_explode = explode("|",$row);
+         $diff = date("d",(strtotime($row_explode[1]) - strtotime($Monday)));
+         if ($diff <=7 & $diff >=0){
+            //echo $diff." - ".$row_explode[1]." , ";
+            
+            $dIndex = date('N',strtotime($row_explode[1]));
+            //echo "index: ".$dIndex. ", ";
+            for($col=1; $col<=7; $col++) {
+               if($col == $dIndex & $row_explode[2] == $mealTime[$x]){
+                  $daytemp[$col] = "<td><div class='redips-drag'> Recipe No: ".$row_explode[3]." ".$row_explode[4]."</div></td>";
+               }
+               elseif (strlen($daytemp[$col]) <= 9) {
+                  $daytemp[$col] = "<td></td>";
+               }
+            }
+         }
+      }
       
-      // construct the details of the row
-      $daytemp = getMealRow($result);
-      //var_dump($daytemp);
-      // echo the row data
       foreach($daytemp as $day){
          echo $day;
       }
-      
       echo "</tr>";
    }
+
+
+
    echo "</table>";
    echo "</div>";
-   
-
-   
-   
-   include_once "footer.php";
+   echo "</form>";
    
 ?>
 
-	<!-- If user drags recipe into another cell where a recipe exists then provide options via jQuery dialog -->
-	<div id="dialog" title="Planner Change">A recipe already exists at that time slot. What would you like to do ?</div>
+
+
+
+
+
+
+
+
+
+
+<?php include_once "footer.php"; ?>
+	
+<!-- If user drags recipe into another cell where a recipe exists then provide options via jQuery dialog -->
+<div id="dialog" title="Planner Change">A recipe already exists at that time slot. What would you like to do ?</div>
 
 
 

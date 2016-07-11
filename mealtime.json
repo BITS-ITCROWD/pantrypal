@@ -1,0 +1,32 @@
+[
+    {
+        "ID": "1",
+        "0": "1",
+        "mealTime": "B",
+        "1": "B",
+        "mealDescription": "Breakfast",
+        "2": "Breakfast",
+        "Comments": null,
+        "3": null
+    },
+    {
+        "ID": "2",
+        "0": "2",
+        "mealTime": "L",
+        "1": "L",
+        "mealDescription": "Lunch",
+        "2": "Lunch",
+        "Comments": null,
+        "3": null
+    },
+    {
+        "ID": "3",
+        "0": "3",
+        "mealTime": "D",
+        "1": "D",
+        "mealDescription": "Dinner",
+        "2": "Dinner",
+        "Comments": null,
+        "3": null
+    }
+]

@@ -4,3 +4,4 @@ mysql -u 'it_crowd' -h localhost 'it_crowd' --execute "SELECT * FROM recipe" --b
 mysql -u 'it_crowd' -h localhost 'it_crowd' --execute "SELECT * FROM ingredient" --bat > ~/workspace/db_backup/ingreient.txt
 mysql -u 'it_crowd' -h localhost 'it_crowd' --execute "SELECT * FROM ingredient_subhead" --bat > ~/workspace/db_backup/ingredient_subhead.txt
 mysql -u 'it_crowd' -h localhost 'it_crowd' --execute "SELECT * FROM method" --bat > ~/workspace/db_backup/method.txt
+mysql -u 'it_crowd' -h localhost 'it_crowd' --execute "SELECT * FROM meal_time" --bat > ~/workspace/db_backup/meal_time.txt

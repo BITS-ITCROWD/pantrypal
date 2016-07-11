@@ -15,8 +15,8 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
     <link rel="stylesheet" type="text/css" href="css/modal.css">
     
     <!--link to Bootstrap css stylesheets-->
-  <link href="css/bootstrap.min.css" rel="stylesheet">; 
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">;
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	
 	 
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -45,28 +45,30 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
 	
 </head>
 
-
-	
+https://bits-it-crowd-melbnetworks.c9users.io/images/recipe_images/	
 
 <body>
-	
-		<!-- Header -->
-		
-		
-
-	<!-- End Header -->
-	
-	<!-- Side Bar -->
-			
-   <!-- End Side Bar -->
 	
 	<!-- SINGLERECIPE GO HERE -------------------------------------------------------------------------------------- -->
 	
 	   <!-- GET THE INGREDIENTS FOR THE RECIPEID -->
-	
 	<?php
 	
-   	echo "Your Recipe ID is: ".$rid.".";
+	$sql = $db->prepare("SELECT imageName from recipe where recipeNumber = :rid");
+   	$sql->bindParam(':rid', $rid);
+      $sql->execute();
+	
+	$result = $sql->setFetchMode(PDO::FETCH_ASSOC); 
+	
+	$k = '';
+	foreach ($db->query($sql) as $row) {
+      $k = $row['imageName'];
+    }
+           echo '<img src= "/images/recipe_images/"'.$k.'" alt="Mountain View" style="width:304px;height:228px";>';
+         
+         ?>
+	
+	<?php
    	
    	echo "<table style='border: solid 1px black;'>";
       echo "<tr><th>ingredientNo</th><th>Ingredient</th><th>mainIngredient</th></tr>";
@@ -106,24 +108,6 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
 
    ?>
    
-   <?php
-   
-   echo "<table style='border: solid 1px black;'>";
-      echo "<tr><th>Step Number</th>/tr>";
-   	
-   	//SELECT ingredient from ingredient where recipeNumber IN(select recipeNumber from meal_planner where 1=1 and userID = '' and mealDate between '' and '' order by 1 desc);
-   	
-   	$sql = $db->prepare("SELECT ingredient from ingredient where recipeNumber IN(select recipeNumber from meal_planner where 1=1 and userID = 2);");
-      $sql->execute();
-      
-      $result = $sql->setFetchMode(PDO::FETCH_ASSOC); 
-       foreach(new TableRows(new RecursiveArrayIterator($sql->fetchAll())) as $k=>$v) { 
-           echo $v;
-         }
-         
-         echo "</table>";
-   
-   ?>
    
       <!-- END RECIPE -->
       
@@ -198,7 +182,7 @@ window.onclick = function(event) {
 	</div>
 
 	<p>
-		<a href="luketemp_testpage.php">Back to Recipe ID selector.php</a>
+		<a href="luketest_singlerecipe.php">Back to Recipe ID selector.php</a>
 	</p>
 	
 	<!-- SINGLERECIPE CONTENTS END HERE -------------------------------------------------------------------------------------- -->
