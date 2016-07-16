@@ -45,29 +45,24 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
 	
 </head>
 
-https://bits-it-crowd-melbnetworks.c9users.io/images/recipe_images/	
-
 <body>
 	
 	<!-- SINGLERECIPE GO HERE -------------------------------------------------------------------------------------- -->
 	
-	   <!-- GET THE INGREDIENTS FOR THE RECIPEID -->
+	   <!-- get the image for the recipe -->
 	<?php
 	
 	$sql = $db->prepare("SELECT imageName from recipe where recipeNumber = :rid");
    	$sql->bindParam(':rid', $rid);
       $sql->execute();
 	
-	$result = $sql->setFetchMode(PDO::FETCH_ASSOC); 
-	
-	$k = '';
-	foreach ($db->query($sql) as $row) {
-      $k = $row['imageName'];
-    }
-           echo '<img src= "/images/recipe_images/"'.$k.'" alt="Mountain View" style="width:304px;height:228px";>';
-         
-         ?>
-	
+	$result = $sql->fetchColumn();
+	$dir = "images/recipe_images";
+
+   echo "<img src='".$dir."/". $result ."' alt='".$result."' style='width:304px;height:228px;'>";
+   
+   ?>
+	<!-- GET THE INGREDIENTS FOR THE RECIPEID -->
 	<?php
    	
    	echo "<table style='border: solid 1px black;'>";
@@ -129,13 +124,10 @@ https://bits-it-crowd-melbnetworks.c9users.io/images/recipe_images/
 		<p>Date: <input type="text" id="datepicker" size="30" name="date"></p>
  
 					<p>Meal:<br>
-                 <select id="Meal" name="meal">
-                   <option value="Breakfast">Breakfast (default)</option>
-                   <option value="Lunch">Lunch</option>
-                   <option value="Dinner">Dinner</option>
-                   <option value="Dessert">Dessert</option>
-                   <option value="MorningSnack">Morning Snack</option>
-                   <option value="AfternoonSnack">Afternoon Snack</option>
+                 <input type="radio" id="Meal" name="meal" value="breakfast" checked> Breakfast<br>
+                   <input type="radio" id="Meal" name="meal" value="lunch"> Lunch<br>
+                  <input type="radio" id="Meal" name="meal" value="dinner"> Dinner
+  
                  </select>
                </p> 
      <input type="submit" value="Submit">          
