@@ -1,10 +1,10 @@
-userID	mealDate	mealTime	recipeNumber	userNote
-2	2016-06-28	B	122	love that stuff for breakfast
-2	2016-06-29	B	22	yummy
-2	2016-06-29	L	6	
-2	2016-06-30	D	306	
-2	2016-07-04	B	546	great meal
-2	2016-07-04	L	432	
-2	2016-07-05	D	42	lovely jubbly
-2	2016-07-08	B	2	
-2	2016-07-11	B	654	
+entryID	userID	mealDate	mealTime	recipeNumber	userNote
+1	2	2016-06-28	B	122	love that stuff for breakfast
+2	2	2016-06-29	B	22	yummy
+3	2	2016-06-29	L	6	
+4	2	2016-06-30	D	306	
+5	2	2016-07-04	B	546	great meal
+6	2	2016-07-04	L	432	
+7	2	2016-07-05	D	42	lovely jubbly
+8	2	2016-07-08	B	2	
+9	2	2016-07-11	B	654	

@@ -59,10 +59,6 @@ Recipe number: <input type="text" name="rid"><br>
 </body>
 </html>
 
-	<p>
-		<a href="luketemp_testpage.php">Back to Recipe ID selector.php</a>
-	</p>
-	
 	<!-- SINGLERECIPE CONTENTS END HERE -------------------------------------------------------------------------------------- -->
 		
 			

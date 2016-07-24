@@ -1,3 +1,8 @@
-ID	username	password
-1	admin	secure
-2	demo	demo
+ID	username	password	firstname	lastname
+1	admin@rmit.com.au	secure		
+2	demo@rmit.com.au	demo	demo_firstname	demo_lastname
+5	paulG@rmit.com.au	test123	Paul	Gauci
+13	jane@rmit.com.au	test	Jane	Geard
+15	test@rmit.com.au	test	TestUser	Geard
+17	test@somewhere.com.au	test	Test	User
+19	jane@test.com.au	test	Jane	Geard

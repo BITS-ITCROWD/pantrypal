@@ -8,11 +8,12 @@
 
 <?php 
    include_once("header.php");
+   include_once("sidebar.php");
    include("config.php"); 
    include("recursiveIterator.php");
 ?>
 
-<h3>Ingridents Shopping List</h3>
+<h3>My List</h3>
 <p></p
 
 

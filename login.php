@@ -1,6 +1,7 @@
 <!--
 Version Control:
 Jane Geard 12/07/2016: Created basic login page
+Jane Geard 20/07/2016: Enable login with new user
 -->
 
 <!DOCTYPE html>
@@ -10,7 +11,7 @@ Jane Geard 12/07/2016: Created basic login page
    include_once "header.php";
    
    session_start();
-   
+ // this is a copy of the index code - would be better to store separately  
  if(isset($_POST['submit'])){
 		$errMsg = '';
 		//username and password sent from Form
@@ -25,18 +26,20 @@ Jane Geard 12/07/2016: Created basic login page
 		
 		
 		if($errMsg == ''){
-			$records = $db->prepare('SELECT * FROM users WHERE username = :demo AND password =:demo');
-			$records->bindParam(':demo', $username);
-			$records->bindParam(':demo', $password);
+			$records = $db->prepare('SELECT * FROM users WHERE username = :username AND password =:password');
+			$records->bindParam(':username', $username);
+			$records->bindParam(':password', $password);
 			$records->execute();
 			$results = $records->fetch(PDO::FETCH_ASSOC);
 			if($results > 0){
 				$_SESSION['login_success'] = $results['username'];
 				$_SESSION['login_userid'] = $results['ID'];
+				$_SESSION['firstname'] = $results['firstname'];
 				header('location:dashboard.php');
 				exit;
 			}else{
-				$errMsg .= 'Username and Password are not found<br>';
+				$errMsg .= $password;
+				//'Username and Password are not found<br>';
 			}
 		}
 	}
@@ -62,7 +65,7 @@ Jane Geard 12/07/2016: Created basic login page
 					?>
 					
    			<form action ="" method ="post">
-		    	  <input type="text" class="form-control" placeholder="Username" name="username" required></br>
+		    	  <input type="email" class="form-control" placeholder="Email" name="username" required></br>
 		        <input type="password" class="form-control" placeholder="Password" name="password" required></br>
 		        <button type="submit" class="btn btn-primary" name='submit'>Sign In</button>
 				</form>

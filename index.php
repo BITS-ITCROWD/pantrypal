@@ -3,6 +3,7 @@ Version Control:
 Jane Geard 30/06/2016: Added a welcome section with text. 
 Amended the format of the login and added register button. Still more work to
 do on layout.
+Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
 -->
 
 <!DOCTYPE html>
@@ -27,14 +28,15 @@ do on layout.
 		
 		
 		if($errMsg == ''){
-			$records = $db->prepare('SELECT * FROM users WHERE username = :demo AND password =:demo');
-			$records->bindParam(':demo', $username);
-			$records->bindParam(':demo', $password);
+			$records = $db->prepare('SELECT * FROM users WHERE username = :username AND password =:password');
+			$records->bindParam(':username', $username);
+			$records->bindParam(':password', $password);
 			$records->execute();
 			$results = $records->fetch(PDO::FETCH_ASSOC);
 			if($results > 0){
 				$_SESSION['login_success'] = $results['username'];
 				$_SESSION['login_userid'] = $results['ID'];
+				$_SESSION['firstname'] = $results['firstname'];
 				header('location:dashboard.php');
 				exit;
 			}else{
@@ -77,7 +79,7 @@ do on layout.
 					?>
 					
    			<form action ="" method ="post">
-		    	  <input type="text" class="form-control" placeholder="Username" name="username" required></br>
+		    	  <input type="email" class="form-control" placeholder="Email" name="username" required></br>
 		        <input type="password" class="form-control" placeholder="Password" name="password" required></br>
 		        <button type="submit" class="btn btn-primary" name='submit'>Sign In</button>
 				</form>

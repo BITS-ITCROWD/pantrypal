@@ -8,6 +8,7 @@ Jane Geard 28/6/16: Added a placeholder for pantrypal logo and aligned
 user welcome / logout links
 Jane Geard 30/06/16 Added Login and Register links when user not signed in.
 Corrected home link when logged in to Dashboard
+Jane Geard 20/07/16 - Modified welcome message to display first name
 -->
 
 <!DOCTYPE html> <!--indicates that this is a html5 document type to the browser-->
@@ -26,6 +27,10 @@ Corrected home link when logged in to Dashboard
     
     <!--link to Bootstrap css stylesheets-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+    <!--include javascript-->
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   
 </head>
 
@@ -48,10 +53,9 @@ Corrected home link when logged in to Dashboard
           
           if(isset($_SESSION['login_success']))
           {
-            $user_welcome = $_SESSION['login_success'];
+            $user_welcome = $_SESSION['firstname'];
           
-          
-          //welcome and sign out links
+                    //welcome and sign out links
           echo '<p class="navbar-text navbar-right">'.
                'Hi '.$user_welcome; 
           echo '! |<a href="logout.php" class="navbar-link">Logout</a></p>';
