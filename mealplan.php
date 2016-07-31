@@ -28,7 +28,7 @@
    // create the sql query and retrieve data
    $query =    "SELECT a.entryID, a.userID, a.mealDate, a.mealTime, a.userNote, a.recipeNumber, b.recipeName ";
    $query .=   "FROM meal_planner a, recipe b ";
-   $query .=   "WHERE userID ='2' "; 
+   $query .=   "WHERE userID =".$userID." "; 
    $query .=   "and a.recipeNumber = b.recipeNumber ";
    $query .=   "ORDER BY a.mealDate, a.mealTime;";
    
@@ -145,9 +145,9 @@
          
          // reset the page (ie reload and any changes to the json are LOST)
          $("#reset").click(function(){
-            var msg =   "RESET means that any changes you \n";
-            msg +=      "have made without saving will be lost. \n \n";
-            msg +=      "Please click OK to reset or Cancel to go back.";
+            var msg =   "Any changes you have made \n";
+            msg +=      "without saving will be lost. \n \n";
+            msg +=      "Click OK to reset or Cancel to go back.";
             if (confirm(msg)){
                location.reload(true);
             }
@@ -169,18 +169,63 @@
          
          // set change indicator if any made to the meal planner
          var rd = REDIPS.drag;
-         rd.event.changed = function () {
-            globalChanges = true;
-            console.log("CH-CH-CHANGES are " + globalChanges);
-            
-         // get current position (method returns positions as array)
-         //var pos = rd.getPosition();
-         // display current row and current cell
-         //alert('Changed: ' + pos[1] + ' ' + pos[2]);
-         }; 
+         
+         // returns the manipulated REDIPS div id
+         function getRDid(){
+            var rdID = rd.obj.children[0].id;
+            rdID = rdID.split("-");
+            var theID = rdID[1];  
+            return theID;
+         };
+         
+         // redips trash - only initiated when the user confirms deletion
+         rd.event.deleted = function(){
+            // get the id of the item being deleted
+            var theID = getRDid();
+            // call the func to save to new json
+            updateMealData(theID,3,"",0);
+            var xxx = "gone !";
+            console.log(theID + " was deleted and is now ... " + xxx);
+         };
          
 
-
+         rd.event.dropped = function () {
+            // get the id of the item being moved           
+            var theID = getRDid();
+            // get the resulting co-ordinates 
+               // get target and source position (method returns positions as array)
+               // pos[0] - target table index
+               // pos[1] - target row index
+               // pos[2] - target cell (column) index
+               // pos[3] - source table index
+               // pos[4] - source row index
+               // pos[5] - source cell (column) index
+            var pos = rd.getPosition();
+            //console.log('Changed to: ' + pos[1] + ' ' + pos[2]);
+            // call the func to save to new json
+            updateMealData(theID,2,"",pos);
+         };
+         
+                  
+         // rd.event.changed = function () {
+         //    globalChanges = true;
+         //    console.log("CH-CH-CHANGES are " + globalChanges);
+         //    //get current position (method returns positions as array)
+         //    var pos = rd.getPosition();
+         //    //display current row and current cell
+         //    console.log('Changed to: ' + pos[1] + ' ' + pos[2]);
+            
+         //    // updateMealData(5,2,"");
+         // }; 
+         
+         // rd.event.clicked = function(currentCell){
+         //    //var aaa = rd.getPosition();
+         //    //console.log('Clicked: ' + aaa);
+         //    var rdID = rd.obj.children[0].id;
+         //    rdID = rdID.split("-");
+         //    var theID = rdID[1];  
+         //    console.log('The ID is: ' + theID);
+         // };
          
       });
       
@@ -229,7 +274,7 @@
                      document.getElementById(tipTextID).innerHTML = comm;
                      
                      // json update
-                     updateMealData(partID[1],comm);
+                     updateMealData(partID[1],1,comm,0);
                   }
                   
                
@@ -251,6 +296,10 @@
                var weekStart = (newSunDate.getDate() + '-' + (newSunDate.getMonth()+1) + '-' +  newSunDate.getFullYear());
                var weekOutput = "<span id = 'week-start-heading'>for the week starting: " + weekStart + "</span>";
                $("#week-start-heading").replaceWith(weekOutput);
+               // replace the hidden date field
+               var weekDateReformed = (newSunDate.getFullYear() + '-' + (newSunDate.getMonth()+1) + '-' + newSunDate.getDate());
+               var weekDate = "<input type='hidden' name='date' id='date' value='" + weekDateReformed + "'>"; 
+               $("#date").replaceWith(weekDate);
                
                // replace the week day sub heads
                weekDayOutput = getWeekDayHead(newSunDate);
@@ -264,102 +313,140 @@
       }
       
       // update the JSON file
-      function updateMealData(recID,comments){
+      // note - 'mode' is: 1 - update a comment; 2 - change the details of a moved recipe; 3 - remove/trash a recipe
+      // note - 'coords' is the resulting co-ordinates (an array where pos 1=dest'n row and 2= dest'n col. 4 & 5 = source etc)
+      function updateMealData(ID,mode,comments,coords){
          // get the current json meal plan data via ajax
          var newJSON = "[\n";
          $.ajax({
             async: true,
             url: "mealplan.json",
             success: function(data) {
-               // build a new json
-               newJSON = "[\n";
-               var update = false;
-               // loop thru the json arrays
-               $.each(data,function(key,val){
-                  // open new array
-                  newJSON += "{\n";
-                  // loop thru the items
-                  $.each(val,function(name,data){
-                     // if this is the record to update change the indicator
-                     if (name=="entryID" && data ==recID){
-                        update = true;
-                     }
-                     // test if note item to update
-                     if (name=="userNote"){
-                        if( update == true){
-                           newJSON += "'" + name + "' : '" + comments + "'\n";
-                           update = false;
-                        } else{
-                           newJSON += "'" + name + "' : '" + data + "',\n";
+         
+               var currJSONStr = JSON.stringify(data);
+               var currJSONObj = JSON.parse(currJSONStr);
+               console.log("got the current json");
+               console.log(currJSONObj);               
+               
+               switch (mode){
+                  // update comments
+                  case 1:
+                     for (var i=0; i<currJSONObj.length; i++) {
+                        if (currJSONObj[i].entryID == ID) {
+                           currJSONObj[i].userNote = comments;
+                           //console.log(currJSONObj);
+                           break;
                         }
-                     // test for the last item - close off array
-                     } else if (name=="recipeName") {
-                        newJSON += "'" + name + "' : '" + data + "'\n},\n";
-                     // every other item
-                     } else if (!$.isNumeric(name)){
-                        newJSON += "'" + name + "' : '" + data + "',\n";
                      }
-                  });
-               });
-               // remove the comma and add the closing ]
-               newJSON = newJSON.substring(0, newJSON.length-2) + "\n]";
+                     break;
+                  
+                  // move a recipe
+                  case 2:
+                     // "mealDate": "2016-07-25",
+                     // "mealTime": "B",
+                     
+
+                     
+                     
+                     // assign new mealtime from coords (pos 1=row)
+                     var newMealTime = globalMealTime[coords[1]];
+
+                     for (var i=0; i<currJSONObj.length; i++) {
+                        if (currJSONObj[i].entryID == ID) {
+                           
+                           // work out meal date from coords
+                           var offSet = coords[2] - coords[5];
+                           console.log(offSet);
+                           newMealDate = new Date(currJSONObj[i].mealDate);
+                           newMealDate.setDate(newMealDate.getDate() + offSet);
+                           // newMealDate.setDate(oldMealDate);
+                           
+                           
+                           //newMealDate ='2016-07-24';
+                           console.log(newMealDate);
+                           
+                           
+                           // givenDate = new Date(givenDate);  // make sure its a js date
+                           // var givenIndex = givenDate.getDay();
+                           // givenDate.setDate(givenDate.getDate() - givenIndex);
+                           // return givenDate;
+                           
+                           // change to new meal date
+                           currJSONObj[i].mealDate = newMealDate;
+                           
+                           // change to new mealtime
+                           currJSONObj[i].mealTime = newMealTime;
+                           console.log(currJSONObj);
+                           break;
+                        }
+                     }
+                     
+                     
+                     
+                     
+                     break;
+                  
+                  // remove/trash a recipe
+                  case 3:
+                     for (var i=0; i<currJSONObj.length; i++) {
+                        if (currJSONObj[i].entryID == ID) {
+                           currJSONObj.splice(i, 1);
+                           break;
+                        }
+                     }
+                     break;
+
+               } // end of switch-case
                
-               // console.log(newJSON);
+               var newJSONstring = JSON.stringify(currJSONObj);
+               var encoded = btoa(newJSONstring);
+               
+               
+               // // build a new json
+               // newJSON = "[\n";
+               // var update = false;
+               // // loop thru the json arrays
+               // $.each(data,function(key,val){
+               //    // open new array
+               //    newJSON += "{\n";
+               //    // loop thru the items
+               //    $.each(val,function(name,data){
+               //       // if this is the record to update change the indicator
+               //       if (name=="entryID" && data ==recID){
+               //          update = true;
+               //       }
+               //       // test if note item to update
+               //       if (name=="userNote"){
+               //          if( update == true){
+               //             newJSON += "\"" + name + "\" : \"" + comments + "\",\n";
+               //             update = false;
+               //          } else{
+               //             newJSON += "\"" + name + "\" : \"" + data + "\",\n";
+               //          }
+               //       // test for the last item - close off array
+               //       } else if (name=="recipeName") {
+               //          newJSON += "\"" + name + "\" : \"" + data + "\"\n},\n";
+               //       // every other item
+               //       } else if (!$.isNumeric(name)){
+               //          newJSON += "\"" + name + "\" : \"" + data + "\",\n";
+               //       }
+               //    });
+               // });
+               // // remove the comma and add the closing "]"
+               // newJSON = newJSON.substring(0, newJSON.length-2) + "\n]";
+               
+               // stringify and encode
+               // newJSONstring = JSON.stringify(newJSON);
+               // var encoded = btoa(newJSON);
+               // AJAX does NOT work - using xml request instead to post the newJSON php
+               var xhr = new XMLHttpRequest();
+               xhr.open('POST','mealplan_newJSON.php',true);
+               xhr.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+               xhr.send('json=' + encoded);
+               
+               
+               //console.log(newJSON);
                console.log("new JSON data created");
-               
-               // use ajax to update the mealplan.json file
-               $.ajax({
-               async: false,
-               type: 'POST',
-               url: "mealplan.json", 
-               data: newJSON, 
-               dataType: "json", 
-               success: console.log("JSON should be updated?")  
-               // success: loadController() 
-               });
-
-
-
-               /* // tried alternative and failed !!!
-               var xmlhttp;
-               if (window.XMLHttpRequest)
-                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-                }
-               else
-                 {// code for IE6, IE5
-                 xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                 }
-               xmlhttp.onreadystatechange=function()
-                 {
-                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                 {
-               alert('done');
-                }
-               }
-               
-               xmlhttp.open("POST","mealplan.php",true);
-               //xmlhttp.open(mpWrite,"mealplan.php",true);
-               
-               xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-               xmlhttp.send("upateJSON="+newJSON);
-               */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             }
          });
@@ -372,7 +459,7 @@
       // format the week day headings with dates
       function getWeekDayHead(sunday){
          var wdOutput ="";
-         wdOutput += "<table id = 'week-day-heading' style='width:70%'>";
+         wdOutput += "<table id = 'week-day-heading' style='width:100%'>";
          wdOutput += "<tr>";
          wdOutput += "<td class='redips-mark'>MEAL</td>";
          wdOutput += "<td class='redips-mark'>Sun " + sunday.getDate() + "</td>";
@@ -441,7 +528,7 @@
          
          //console.log("row is: " + row);
          // open the table
-         output += "<table id='meal-data' style='width:70%'>";
+         output += "<table id='meal-data' style='width:100%'>";
 
          // get the mealplan json data
          var mealDate="";
@@ -468,8 +555,14 @@
                for (var y = 0; y < row.length; y++){
                   if(globalMealTime[y] == mealTime){
                      //console.log(val.recipeNumber + " " + val.userNote);
-                     
-                     row[y][dayNum+1] = val.recipeName + "|" + val.userNote + "|" + val.entryID;
+                     var userNoteEval="";
+                     //test for the value of "null"
+                     if(val.userNote=="NULL"){
+                        userNoteEval="";
+                     } else{
+                        userNoteEval=val.userNote;
+                     }
+                     row[y][dayNum+1] = val.recipeName + "|" + userNoteEval + "|" + val.entryID;
                      //console.log("row: " + row);
                   } 
                } //end of for loop
@@ -511,7 +604,7 @@
                   // create the TD tag with and id of the 'entryID' from 'meal_planner' table. 
                   // Include the recipe name amd user comments within the tag.
                   var recID = recSplit[2];
-                  output += "<td><div class='redips-drag'><div class='tip'>" + recShort + "<span class='tiptext'>" + recLongCap + "</span></div>";
+                  output += "<td><div class='redips-drag'><div class='tip' id='rec-" + recID + "'>" + recShort + "<span class='tiptext'>" + recLongCap + "</span></div>";
                   output += "<div class='tip'><a id='tip-" + recID + "' href='#userComm'>" + recCommSh + "</a>";
                   output += "<span class='tiptext' id ='tiptext-" + recID + "'>" + recCommLg + "</span></div></div></td>";
                }
@@ -568,7 +661,24 @@
          return diff;
       } 
       
-
+      // print the planner
+      function printThis(area) {
+      var printable = document.getElementById(area).innerHTML;
+      var content = document.body.innerHTML;
+      document.body.innerHTML = printable;
+      window.print();
+      document.body.innerHTML = content;
+      }
+      
+      // submit to the mylist page with dates
+      function seeMyList(page){
+         document.getElementById('form_planner').action = page;
+         document.getElementById('form_planner').submit();
+         
+      }
+      
+      
+      
 
    </script>
 
@@ -618,19 +728,23 @@
 <!-- MAIN CONTENT -->
 <!-- table containing planner controls -->
 <?php 
+   echo "<div class='col-sm-9' id='printable'>";
    echo "<h2>Meal Planner</h2>";
+   echo "<form id='form_planner' method='post' action='mealplan_saveToTable.php'>";
    echo "<span id = 'week-start-heading'>for the week starting: </span>";
-   echo "<form id='form_planner' method='post' action=".$_SERVER['PHP_SELF'].">";
+   echo "<input type='hidden' name='date' id='date' value=''>";
    echo "<div id='redips-drag'>";
-   echo "<table style='width:70%'>";
+   echo "<table style='width:100%'>";
    echo "<tr>";
    echo "<td class='redips-mark'><button type='button' class='nav' id='back'>back</button></td>";
    //echo "<td class='redips-mark'><input type='submit' class='button' value='back' name='back'/></td>";
    $displayDate = date('d-m-Y',strtotime(Today));   
    echo "<td class='redips-mark'>Please select new date:<p>Date: <input type='text' id='datepicker' value='$displayDate'</p></td>";
    echo "<td class='redips-mark'><button type='button' id='reset'>reset</button></td>";
-   echo "<td class='redips-mark'><button type='button'>copy to another week</button></td>";
-   echo "<td class='redips-mark'><button type='button' id='print'>print planner</button></td>";
+   
+   echo "<td class='redips-mark'><button type='button' id='list' onclick=\"seeMyList('mylist.php')\">See My List</td>";
+   
+   echo "<td class='redips-mark'><button type='button' onclick=\"printThis('printable')\" >print planner</button></td>";
    echo "<td class='redips-mark'><input type='submit' class='button' value='save' name='save'/></td>";
    echo "<td class='redips-trash'>trash bin</td>";
    echo "<td class='redips-mark'><button type='button' class='nav' id='next'>next</button></td>";
@@ -639,7 +753,7 @@
    
    
    // create the current week planner headings
-   echo "<table id = 'week-day-heading' style='width:70%'>";
+   echo "<table id = 'week-day-heading' style='width:100%'>";
    echo "<tr>";
    echo "<td class='redips-mark'>MEAL</td>";
    echo "<td class='redips-mark'>Sun</td>";
@@ -654,7 +768,7 @@
 
    // construct the planner detail rows (no data)
  
-   echo "<table id='meal-data' style='width:70%'>";   
+   echo "<table id='meal-data' style='width:100%'>";   
    echo "<tr>";
    echo "<td class='redips-mark'>Breakfast</td>";
    for($col=1; $col<=7; $col++) {
@@ -674,6 +788,7 @@
    echo "</table>";
    echo "</div>";
    echo "</form>";
+   echo "</div>";
    
 
 ?>
@@ -685,7 +800,21 @@
 
 
 <!-- If user drags recipe into another cell where a recipe exists then provide options via jQuery dialog -->
-<div id="dialog" title="Planner Change">A recipe already exists at that time slot. What would you like to do ?</div>
+<!--<div id="dialog" title="Planner Change">A recipe already exists at that time slot. What would you like to do ?</div>-->
+
+
+
+
+
+<!-- Byrons Debug Code -->
+
+   <!--<pre>-->
+   <!--  	<?php print_r ($_SESSION); ?>-->
+   <!--  	<?php print_r ($_POST); ?>-->
+   <!--  	<?php print_r ($_GET); ?>-->
+   <!--  	<?php print_r ($_COOKIE); ?>-->
+   <!--</pre>-->
+
 
 
 

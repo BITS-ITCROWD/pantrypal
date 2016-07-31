@@ -1,0 +1,36 @@
+#main-content {
+   border:solid thin green;
+}
+
+#stepOne {
+   background-image: url("/images/numberOne.png");
+}
+
+#stepNumber {
+   border: solid thin blue;
+   float: left;
+   width: 45px;
+}
+#stepInstructions {
+   border: solid thin red;
+   height: 100px;
+   background:red;
+   overflow: hidden;
+}
+#stepContent {
+   margin:0 auto; 
+   
+}
+#stepsContent .steps {
+   float:left; 
+   margin: 0 0 0 27px; 
+   width: 245px; 
+   height: 100px;
+   background:#ccffff; 
+   padding:0 0 27px 0;
+   
+}
+#stepContent .steps:first-child {
+   margin:0;
+   
+}

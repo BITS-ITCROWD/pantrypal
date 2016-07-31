@@ -2,13 +2,15 @@
 
 <html lang="en">
    
-<?php
 
+<?php
+     
    include("config.php");
    
    //Add header
    include_once "header.php";
    
+
 ?>
 
 <head>

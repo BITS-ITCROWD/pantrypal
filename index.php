@@ -40,7 +40,7 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
 				header('location:dashboard.php');
 				exit;
 			}else{
-				$errMsg .= 'Username and Password are not found<br>';
+				$errMsg .= 'Username and Password are not found';
 			}
 		}
 	}

@@ -10,6 +10,13 @@ var redips = {},		// redips container
 	counter = 0,		// counter for cloned DIV elements
 	clonedDIV = false,	// cloned flag set in event.moved
 	lastCell;			// reference to the last cell in table
+	
+	
+// elements can be dropped only to the empty table cells
+REDIPS.drag.dropMode = 'single';
+
+REDIPS.drag.trash.question = 'Are you sure you want to delete this item ?';
+
 
 
 // redips initialization
@@ -83,7 +90,7 @@ redips.init = function () {
 				// close dialog
 				$(this).dialog('close');
 			},
-			*/
+
 			'Switch': function () {
 				// enable elements in target cell (return solid border) in both cases
 				rd.enableDrag(true, rd.td.target);
@@ -115,8 +122,9 @@ redips.init = function () {
 					rd.td.source.appendChild(rd.obj);
 				$(this).dialog('close');
 				}
-			}
 			
+			}
+							*/
 			
 		
 		},

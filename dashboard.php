@@ -4,7 +4,8 @@ Jane Geard 12/07/2016: Align footer with sidebar and main content
 <!DOCTYPE html>
 <?php
 //adds the header
-include_once "header.php";
+$current = 'home';
+include "header.php";
 
 session_start();
 if(!isset($_SESSION['login_success'])){ //if login in session is not set

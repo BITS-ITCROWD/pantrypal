@@ -63,7 +63,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
 		include("config.php");
       
       //adds the iterator to build the ingredient and recipe table
-      include_once("recursiveIterator_mod.php");
+      include_once("recursiveIterator.php");
 		
 		//declare the recipeID number from the search results
 		$rid = $_GET['rid'];
@@ -91,7 +91,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
    
    <div class = "container-fluid">
 	
-	   <!-- LEFT NAV MENU -->
+	   <!-- LEFT NAV -->
 	
    	<div class="col-md-2">
       	<?php
@@ -101,12 +101,11 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
       	?>
    	</div>
 	
-   	<!-- MIDDLE SECTION - main contents of page -->
+   	<!-- MIDDLE SECTION -->
    	
    	<div class="col-md-10">
    	   
    	   
-   	   <!-- top row - contmains the recipe image, recipe name, and blank space -->
    	   <div class = "row">
    	   
    	   
@@ -123,7 +122,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                	$result = $sql->fetchColumn();
                	$dir = "images/recipe_images";
                
-                  echo "<div><img src='".$dir."/". $result ."' alt='".$result."' style='max-width:350px;max-height:350px;display: block;width: auto;height: auto;' class = 'img-thumbnail'></div>";
+                  echo "<div class = 'img-thumbnail'><img src='".$dir."/". $result ."' alt='".$result."' style='width:250px;height:200px;'></div>";
                   
                   ?>
                   
@@ -156,7 +155,6 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
             
          </div> <!-- end <div class = "row"> -->	
          
-         <!-- middle row - contains the ingredients list and "Add" buttons and logic -->
          <div class = "row">
             	
             <div class = "col-md-8">
@@ -167,10 +165,10 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
          	   
             	<?php
                	
-               	echo "<table style='width:100%;border: solid 1px black;'>";
-                  echo "<tr><th>Ingredient</th></tr>";
+               	echo "<table style='border: solid 1px black;'>";
+                  echo "<tr><th>Ingredient</th><th>Main Ingredient</th></tr>";
                
-               	$sql = $db->prepare("SELECT ingredient FROM ingredient where recipeNumber = :rid");
+               	$sql = $db->prepare("SELECT ingredient, mainIngredients FROM ingredient where recipeNumber = :rid");
                	$sql->bindParam(':rid', $rid);
                   $sql->execute();
                   
@@ -247,13 +245,13 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                	<div>
                   
                                  <!-- Trigger/Open The Modal -->
-                     <button id="lukemyBtn" class = "btn btn-primary">Add to Meal Planner</button></br></br>
+                     <button id="lukemyBtn" class = "badge">Add to Meal Planner</button></br></br>
                      
                      
                                  <!--Added by Jane: Add to favourites button-->
                      
                      <form action = "" method="post">
-                     <button type="submit" button id="Add_Favourites" class = "btn btn-primary" 
+                     <button type="submit" button id="Add_Favourites" class = "badge" 
                      name="submit"><?php echo $fav_btn_name?></button>
                      </form>
                      
@@ -357,22 +355,20 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                   
          </div> <!-- end <div class = "row"> -->
 
-         
-         <!-- bottom row - contains the recipe -->
          <!-- GET THE RECIPE FOR THE RECIPEID -->
                   
          <div class = "row">
             
-            <div class = "col-md-8">
+            <div class = "col-md-9">
                   
                   <h2>How To Cook</h2>
                
                   <?php
                   	
-                  	echo "<table style='width:100%;border: solid 1px black;'>";
-                     echo "<tr><th>Description</th></tr>";
+                  	echo "<table style='border: solid 1px black;'>";
+                     echo "<tr><th>#</th><th>Description</th></tr>";
                   	
-                  	$sql = $db->prepare("SELECT stepDescription FROM method where recipeNumber = :rid");
+                  	$sql = $db->prepare("SELECT stepNumber, stepDescription FROM method where recipeNumber = :rid");
                   	$sql->bindParam(':rid', $rid);
                      $sql->execute();
                      

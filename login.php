@@ -38,8 +38,7 @@ Jane Geard 20/07/2016: Enable login with new user
 				header('location:dashboard.php');
 				exit;
 			}else{
-				$errMsg .= $password;
-				//'Username and Password are not found<br>';
+				$errMsg .= 'Username and Password are not found';
 			}
 		}
 	}

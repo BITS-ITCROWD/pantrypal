@@ -6,3 +6,5 @@ ID	username	password	firstname	lastname
 15	test@rmit.com.au	test	TestUser	Geard
 17	test@somewhere.com.au	test	Test	User
 19	jane@test.com.au	test	Jane	Geard
+20	marcusnorticus@gmail.com	demo	Mark	Norton
+21	Byron.Fisher@rmit.edu.au	password	Byron	Fisher

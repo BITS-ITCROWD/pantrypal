@@ -13,6 +13,15 @@
 
 <head>
    <title>Contact Us</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+    .bs-example{
+    	margin: 20px;
+    }
+</style>
 </head>
 
 <body>
@@ -58,7 +67,7 @@
          	</div>
          	<div class="form-group">
          		<div class="col-sm-10 col-sm-offset-2">
-         			<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+                  <a href="#myModal" role="button" class="btn btn-large btn-primary" data-toggle="modal">Send</a>
          		</div>
          	</div>
          	<div class="form-group">
@@ -67,6 +76,25 @@
          		</div>
          	</div>
          </form>
+                  
+         <!-- Modal for message sent confirmation -->
+         <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                     <h4 class="modal-title">Confirmation</h4>
+                  </div>
+                  <div class="modal-body">
+                     <p>Your message has been sent</p>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
       </div>
    </div>
    
