@@ -1,6 +1,9 @@
 <!--
 Version Control:
 Jane Geard 28/06/2016: Created sidebar page with basic button links.
+Jane Geard 04/08/2016: Updated so that sidebar is to be included as part of the
+container of each page's main content. Changed buttons to use Primary format 
+from Bootstrap
 
 -->
 
@@ -18,23 +21,24 @@ Jane Geard 28/06/2016: Created sidebar page with basic button links.
     <!--responsive to mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <!--link to Bootstrap css stylesheets-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    
+   
 </head>
 <body>
+  <div id = "sidebar">
+  
   <!-- Mark - Playing with bootstrap layout -->
   <div class="col-sm-3">
-  <!--<div id = "sidebar">-->
+  
   <!-- Mark - Playing with bootstrap layout -->  
     <?php 
     session_start();
     
     ?>
-      <!-- Search bar that links to recipes.php by Mark -->    
+    
+         <!-- Search bar that links to recipes.php by Mark -->    
       <form  method="post" action="recipes.php?go"  id="searchform"> 
         <input  type="text" name="searchEntry" placeholder="  Search Recipes.."> 
-        <button type="submit" class="btn btn-default" name="submit">
+        <button type="submit" class="btn btn-primary" name="submit">
           <span class="glyphicon glyphicon-search"></span>
         </button>
       </form> 
@@ -42,16 +46,16 @@ Jane Geard 28/06/2016: Created sidebar page with basic button links.
       <!--button links-->
       
       <div class="btn-group-vertical" role="group" aria-label="...">
-        <button type="button" class="btn btn-default navbar-btn">
-           <a href="favourites.php">View Favourite Recipes</a></button>
-        <button type="button" class="btn btn-default navbar-btn">
+        <button type="button" class="btn btn-primary navbar-btn">
+           <a href="favourites.php">View Favourites</a></button>
+        <button type="button" class="btn btn-primary navbar-btn">
            <a href="mealplan.php">View Meal Plan</a></button>
-        <button type="button" class="btn btn-default navbar-btn">
-           <a href="mylist.php">View Shopping List</a></button>
+        <button type="button" class="btn btn-primary navbar-btn">
+           <a href="mylist.php">View My List</a></button>
       </div>
       
-        
-    
+       
+   </div>
   </div>
 </body>
 </html>

@@ -18,7 +18,9 @@ Jane Geard 03/08/2016: Updated to include fixed footer and collapsible menu
     <!--responsive to mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
+    <!--link to Bootstrap css stylesheets-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 <body>
   <div id = "footer">

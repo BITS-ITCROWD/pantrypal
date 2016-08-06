@@ -59,11 +59,18 @@ if(isset($_POST['submit']))
             $sql->bindParam(':lastname', $lastname);
             $sql->execute();
             
-            $_SESSION['login_success'] = $username;
-            $_SESSION['firstname'] = $firstname;
-				header('location:dashboard.php');
-				exit;
-            
+            // modified by Paul Gauci 06082016 so that user id is placed in SESSION
+            $records = $db->prepare('SELECT * FROM users WHERE username = :username');
+   			$records->bindParam(':username', $username);
+   			$records->execute();
+   			$results = $records->fetch(PDO::FETCH_ASSOC);
+      			if($results > 0){
+      				$_SESSION['login_success'] = $username;
+                  $_SESSION['firstname'] = $firstname;
+                  $_SESSION['login_userid'] = $results['ID'];
+      				header('location:dashboard.php');
+      				exit;
+      			}
             }
       }
 }

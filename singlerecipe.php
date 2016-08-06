@@ -268,29 +268,35 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                      
                         <form id="formoid" action="addtomealplan.php" title="" method="post">
                            
-                           <input id="format" type="hidden" value="yy-mm-dd"></select>
+                           <input id="format" type="hidden" value="yy-mm-dd">
                            
-                        		<p>Date: <input type="text" id="datepicker" size="30" name="datepicker"></p>
+                        		<p>Date: <input type="text" id="datepicker" size="30" name="datepicker" required></p>
                          
-               					<p>Meal:<br>
+               					<p>Meal:<br> 
                					
-                                <input type="radio" id="meal" name="meal" value="B" checked> Breakfast<br>
-                                  <input type="radio" id="meal" name="meal" value="L"> Lunch<br>
-                                 <input type="radio" id="meal" name="meal" value="D"> Dinner
-                 
-                              </p> 
-            
+                     
+                                 
+                                 <select id="meal" name="mtime" required>
+                                   <option value="B">Breakfast</option>
+                                   <option value="L">Lunch</option>
+                                   <option value="D">Dinner</option>
+                                 </select>
+                              
+                              
+                           </p> 
                              <div>
                                  <input type="submit" id="submitButton"  name="submitButton" value="Submit">
                              </div> 
                              
                         </form>
+                        
                         <div id="successMessage" style="display: none;">You've successfully added it in there!</div>
                          
                      </div>
                      
                   </div>
                      	 
+             
                      <!-- submit script -->
       
                      <script type='text/javascript'>

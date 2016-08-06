@@ -8,3 +8,10 @@ ID	username	password	firstname	lastname
 19	jane@test.com.au	test	Jane	Geard
 20	marcusnorticus@gmail.com	demo	Mark	Norton
 21	Byron.Fisher@rmit.edu.au	password	Byron	Fisher
+22	s3526554@student.rmit.edu.au	Demo	William	Ellis
+23	quinto@quinto.com	quinto	Quinto	Dude
+24	p1@p1.com	p1	p1	p1
+25	p2@p2.com	p2	p2	p2
+26	p3@p3.com	p3	p3	p3
+27	p4@p4.com	p4	p4	p4
+28	p5@p5.com	p5	p5	p5

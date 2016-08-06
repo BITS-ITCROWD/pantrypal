@@ -19,8 +19,10 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
    </head>
    
    <body>
-       <?php include_once "sidebar.php"; ?>
+       
       <div class = "container">
+      
+      <?php include_once "sidebar.php"; ?>
          
        <!--  <h1><?php echo 'Welcome '.$_SESSION['login_success']; ?> </h1> added to the header-->
        <h2><a href = "session_dump.php">View Session</a></h2>

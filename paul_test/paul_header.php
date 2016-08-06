@@ -29,9 +29,9 @@ More to do
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!--link to Bootstrap css stylesheets-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <!--link to our override css stylesheet-->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="paul.css">
     
     <!--include javascript-->
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -93,7 +93,7 @@ More to do
             <li class="<?php if($page == 'index.php' || $page =='dashboard.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='dashboard.php'>Home</a></li>
             <li class="<?php if($page == 'recipes.php'|| $page =='favourites.php'|| $page =='singlerecipe.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='recipes.php'>Recipes</a></li>
             <li class="<?php if($page == 'mealplan.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='mealplan.php'>Meal Plan</a></li>
-            <li class="<?php if($page == 'mylist.php'|| $page =='IngredList.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='mylist.php'>My List</a></li></ul> 
+            <li class="<?php if($page == 'mylist.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='mylist.php'>My List</a></li></ul> 
           
           </div>
           

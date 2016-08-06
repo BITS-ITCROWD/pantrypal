@@ -18,9 +18,11 @@
 </head>
 
 <body>
-   <?php include_once "sidebar.php"; ?>
+   
    
    <div class="container"> <!-- haven't indented everything since adding this line-->
+   
+   <?php include_once "sidebar.php"; ?> <!--jane moving sidebar within content container-->
    
    <div class="col-sm-9" >
       

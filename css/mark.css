@@ -1,9 +1,9 @@
 #main-content {
    border:solid thin green;
+   text-align: center;
 }
 
 #stepOne {
-   background-image: url("/images/numberOne.png");
 }
 
 #stepNumber {
@@ -14,23 +14,30 @@
 #stepInstructions {
    border: solid thin red;
    height: 100px;
-   background:red;
    overflow: hidden;
 }
-#stepContent {
-   margin:0 auto; 
+#stepsContent {
+   margin: auto;
+   border: solid thick red;
    
+   min-height: 100px;
+   overflow: hidden;
+   padding: 10px 0 10px 10px;
 }
+
 #stepsContent .steps {
    float:left; 
-   margin: 0 0 0 27px; 
-   width: 245px; 
+   margin: 0 0 0 20px; 
+   min-width: 245px;
+   max-width: 245px;
+   /**width: 30%; **/
    height: 100px;
-   background:#ccffff; 
+   background:#CBC5C4; 
    padding:0 0 27px 0;
    
 }
 #stepContent .steps:first-child {
    margin:0;
+   padding: 0;
    
 }

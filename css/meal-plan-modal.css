@@ -1,0 +1,20 @@
+#success-modal {
+	position: fixed;
+	top:0;
+	width: 100%;
+	left:0;
+	height:100%;
+   background:rgba(0,0,0,0.7);
+	z-index:999;
+}
+
+#success-box {
+  top: 50%;
+  left: 40%;
+  position: absolute;
+  width: 500px;
+  height: 50px;
+  z-index: 99;
+  margin: -100px 0 0 -150px;
+  background: white;
+}

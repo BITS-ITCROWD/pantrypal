@@ -1,0 +1,113 @@
+/*style sheet 
+
+Jane Geard: sources of information for the following image styles and header 
+navigation styles:
+http://www.w3schools.com/css/css_rwd_images.asp
+https://www.lynda.com/Bootstrap-tutorials/Offsetting-columns/417641/429432-4.html
+http://www.w3schools.com/cssref/pr_margin.asp
+*/
+
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300italic,300,400italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans:400,300,300italic,700,400italic,700italic,800,800italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic);
+
+element-xyz{
+font-family: 'PT Sans', sans-serif;
+font-family: 'Muli', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+
+p{
+  font-family: 'Poppins', sans-serif; 
+}
+
+h1,h2{
+   font-family: 'Roboto', sans-serif;
+   
+}
+
+
+
+/*image styles*/
+.jumbotron{
+   background-color: #FFFFFF;  
+}
+
+.btn-primary, 
+.btn-primary:hover, 
+.btn-primary:active, 
+.btn-primary:visited {
+   background-color:#FF6A00;
+   
+}
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin-top: -7px;   /* http://stackoverflow.com/questions/18474564/bootstrap-3-navbar-with-logo
+                       Align the logo with the navbar
+                       */
+  
+   }
+
+/*header navigation styles */
+
+.navbar-link {
+   color: #FFFFFF !important;
+}
+
+.navbar-text {
+   color: #FFFFFF !important;
+}
+
+
+.navbar {
+   background-color: #555599 !important;
+
+   margin-bottom: 0 !important;
+   
+   
+}
+
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF !important;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #000000 !important;
+    background-color: transparent !important;
+}
+
+.navbar-default .navbar-nav>.active>a {
+   
+   background-color: #0066CC !important;
+}
+
+
+/* To stop footer overlapping content. 
+source: http://stackoverflow.com/questions/26336190/bootstrap-sticky-footer-overlapping-content
+*/
+
+body {
+    padding-bottom: 70px;
+}
+
+
+/*footer styles
+
+*/
+
+.footer {
+   background-color:#555599 !important;
+
+}
+
+
+

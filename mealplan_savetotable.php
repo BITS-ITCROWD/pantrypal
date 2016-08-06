@@ -2,7 +2,7 @@
 <?php
    // session stuff
    session_start();
-   
+
    if(!isset($_SESSION['login_userid'])){
       header("Location: index.php");
    }
@@ -18,16 +18,13 @@
    include("config.php");
 
    // start here
-   echo "in the table updater";
-   
    // get the json file for this user
-   $myfile = "mealplan.json";
+   $myfile = "files/mealplan-".$userID.".json";
 
    $jstring = file_get_contents($myfile);
    // decode the json
    $jobj = json_decode($jstring);
-   var_dump($jobj);
-   
+
    // delete all records from the mealplanner table for this user
    $query = "DELETE FROM meal_planner WHERE userID = '" .$userID."'";
    $result = $db->query($query);
@@ -74,17 +71,44 @@
          $sqlInsStr .= "'".$mealTime."',";
          $sqlInsStr .= "'".$recipeNumber."',";
          $sqlInsStr .= "'".$userNote."')";
-         
-         echo $sqlInsStr;
-         
-         // submit the insert sql query
+
+         $success = false;
+         // submit the insert sql query and set the succes variable for later
          if ($db->query($sqlInsStr) === FALSE) {
-            echo"FAILED MAN!!!!!!!!!!!!";
             die(mysql_error());
          } else{
-            echo"SUCCESS DUDE !!!!!!!!!!!!!";
+            $success = true;
          }
+
       } // end of outer for each in json object
    } // end of if...
-      
+
 ?>
+
+<head>
+   <!-- seems to require its own style sheet-->
+   <link rel="stylesheet" href="css/meal-plan-modal.css">
+</head>
+
+<body>
+<?php
+   // the body of the page is a message to the user stating success or failure
+   echo "<div id='success-modal'>";
+      echo "<div id='success-box'>";
+      if($success == true){
+         echo "Your changes have been saved.";
+         echo "</br>";
+         echo "...returning to you meal planner now...";
+      } else{
+         echo "Something went wrong. Please try to save again.";
+         echo "</br>";
+         echo "...returning to you meal planner now...";
+      }
+      echo "</div>";
+   echo "</div>";
+   // returns back to the mealplan in a second
+   header("refresh:1; url=mealplan.php"); 
+   
+?>
+
+</body>

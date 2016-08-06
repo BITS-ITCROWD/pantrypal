@@ -18,7 +18,7 @@
    
    // decode the new json in the POST and write it to the json file
    $decoded = base64_decode($_POST['json']);
-   $jsonFile = fopen('mealplan.json','w+');
+   $jsonFile = fopen('files/mealplan-'.$userID.'.json','w+');
    fwrite($jsonFile,$decoded);
    fclose($jsonFile);
       

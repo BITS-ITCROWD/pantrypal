@@ -1,16 +1,12 @@
 <!--
-Version Control:
-Jane Geard 30/06/2016: Added a welcome section with text. 
-Amended the format of the login and added register button. Still more work to
-do on layout.
-Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
+TEST ONLY
 -->
 
 <!DOCTYPE html>
 <?php
-   include("config.php");
+   //include("config.php");
    //adds the header
-   include_once "header.php";
+   include_once "paul_header.php";
    
    session_start();
    
@@ -70,9 +66,7 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
 	<div class="container">
 		    <!--Row with two equal columns-->
      <div class="row">
-     	  <div class="col-sm-2"> </div>
-        
-        <div class="col-sm-4 form-group"><!--Column left-->
+        <div class="col-xs-6 form-group"><!--Column left-->
 		      	
 		      	<?php
 						if(isset($errMsg)){
@@ -87,19 +81,15 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
 				</form>
     		</div>
  
- 		<div id = "register">
-   	<div class="col-sm-4"> <!--Column right-->
+   	<div class="col-xs-6 form-group"><!--Column right-->
  	   	<h2>Don't have a PantryPal Account?
   			<a class="btn btn-primary" href="registeruser.php" role="button">Register here</a>
   			</h2>
   		</div>
-  		</div>
-  		<div class="col-sm-2"> </div>
-  		
     </div>
 	</div>
 </body>
 <?php
-include_once "footer.php";
+include_once "paul_footer.php";
 ?>
 </html>

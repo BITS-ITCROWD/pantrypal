@@ -19,9 +19,10 @@ and adapted it to fit with the requirements of this page
 </head>
 
 <body>
-   <?php include_once "sidebar.php"; ?>
+   
    
    <div class="container">
+   <?php include_once "sidebar.php"; ?>
    
    <div class="col-sm-9" >
       

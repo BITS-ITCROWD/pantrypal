@@ -14,10 +14,13 @@
 </head>
 
    <body>
-      <?php include_once "sidebar.php"; ?>
+      
    
       <div class="container"> 
-   
+         
+         <?php include_once "sidebar.php"; ?> <!--jane including the sidebar 
+                                             in the main content container-->
+         
          <div class="col-sm-9" >
             <h1>You have been logged out</h1>
             <h3>Click <a href="login.php">here to log in</a> or wait to be returned to the Welcome page</h3>
