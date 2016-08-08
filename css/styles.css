@@ -8,8 +8,19 @@ http://www.w3schools.com/cssref/pr_margin.asp
 */
 
 
-/*image styles*/
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,300italic);
 
+*{
+   font-family: 'Poppins', sans-serif;    
+}
+
+h1,h2,h3,h4,h5,h6{
+   font-family: 'Roboto', sans-serif;
+}
+
+
+/*image styles*/
 .logo {
   max-width: 150px;
   height: auto;
@@ -35,7 +46,7 @@ changes the login in /sign up text links to white*/
 /*changes the navigation menu to blue removes bottom margin caused by jumbotron*/
 
 .navbar {
-   background-color: #0099CC !important;
+   background-color: #555599 !important;
    margin-bottom: 0 !important;
  
 }
@@ -66,7 +77,7 @@ changes the login in /sign up text links to white*/
 
 .navbar-default .navbar-nav>.active>a {
    
-   background-color: #0066CC !important;
+   background-color: #1D1D62 !important;
 }
 
 
@@ -84,19 +95,35 @@ body {
 changes the footer to green */
 
 .footer {
-   background-color:#00CC00 !important;
+   background-color:#555599 !important;
 
 }
 
-/*sidebar styles
+/* button styles*/
 
-changes the sidebar button text to white*/
+/*all buttons have red background with grey border*/
+.btn, .btn-primary{
+   background-color:#ff0000;
+   border:1px solid #787878 !important;
+}
 
-
+/*changes the button text to white*/
 .btn>a {
     color: #FFFFFF !important;
 }
-    
+
+/*button hover state*/
+.btn:hover, .btn-primary:hover{
+   background:#C60000;
+}
+
+/*button active & focus state*/
+.btn-primary:active, .btn:active, .btn-primary:focus, .btn:focus{
+   background:#950000 !important;
+}
+
+
+/*sidebar styles*/
 /*adds padding taken away for jumbotron*/    
     
 #sidebar {
@@ -106,6 +133,11 @@ changes the sidebar button text to white*/
 }
 
 /* main content styles*/
+
+.jumbotron{
+   background-color: #FFFFFF;  
+}
+
 
 /*provides additional padding between the main content headings and the search bar*/
    

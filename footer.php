@@ -69,8 +69,8 @@ Jane Geard 03/08/2016: Updated to include fixed footer and collapsible menu
           // adds the footer links
                 echo '<div class="collapse navbar-collapse" id="collapsefootermenu">'.
                       '<ul class="nav navbar-nav navbar-right">'.
-                      '<li><a href="login.php">Contact</a></li>'.
-                      '<li><a href="login.php">Site Map</a></li>'.
+                      '<li><a href="contactus.php">Contact</a></li>'.
+                      '<li><a href="sitemap.php">Site Map</a></li>'.
                       '<li><a href="faq.php">FAQ</a></li>' .
                       '<li><a href="aboutus.php">About Us</a></li></ul></div>';
                   }

@@ -33,5 +33,55 @@
 .lukeclose:focus {
     color: black;
     text-decoration: none;
-    cursor: pointer;
+    cursor: pointer; 
+    
+}
+
+/*-- ** Style a Select Box Using Only CSS **/
+/*Source: http://bavotasan.com/2011/style-select-box-using-only-css/** */
+/*Source: http://danielneumann.com/blog/how-to-style-dropdown-with-css-only/ */
+/*Source: http://stackoverflow.com/a/5809186*/
+/* -------------------- Select Box Styles: bavotasan.com Method (with special adaptations by ericrasch.com) */
+/* -------------------- Source: http://bavotasan.com/2011/style-select-box-using-only-css/ */
+
+#lukestyled {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   background-color: #3b8ec2;
+}
+
+#lukestyled select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+   color: #fff; 
+}
+
+#meal {
+   background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+   height: 29px;
+   overflow: hidden;
+   width: 240px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   background-color: #3b8ec2;
+}
+
+#meal select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
+   color: #fff; 
 }

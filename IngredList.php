@@ -48,9 +48,9 @@ echo "<div class = 'col-sm-9'>";
          echo "<br/><h4><b>You have selected following ".$checked_count." Ingredient(s): 
                            </b></h4><br/><br/>";
          // Buttons for Print and Email
-   echo "<input class= 'button1' type='submit' value='Print' onclick='printAlert()'>      
+   echo "<input class= 'button1 btn btn-primary' type='submit' value='Print' onclick='printAlert()'>      
          </input>  ";
-   echo "<input class= 'button2' type='submit' value='Email' onclick='emailAlert()'>
+   echo "<input class= 'button2 btn btn-primary' type='submit' value='Email' onclick='emailAlert()'>
          </input>";
          
          foreach($_POST['list'] as $selected) 

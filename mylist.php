@@ -74,7 +74,7 @@
    echo "<p>Please select the start of your weeks shopping list: <input type='text' 
             id='datepicker' name='datepicker' value = '$displayDate'></p>";
 ?>
-<input type= 'submit' id = 'datevalue' value ='Submit' name ='date'></input>
+<input type= 'submit' class='btn btn-primary' id = 'datevalue' value ='Submit' name ='date'></input>
 </form>
 <br />
 
@@ -96,10 +96,10 @@ if(isset($_POST['date']) && $_POST['date']!=""){
    $dateEndLabel = date("d-m-Y", strtotime($displayStart.'+7 day'));
    $dateEnd = date("Y-m-d", strtotime($displayStart.'+7 day'));
    
-   echo "<br/><h3><b>Displaying the results for the period:<br/>
-         $dateStartLabel - $dateEndLabel<br/></b></h3>";
+   echo "<br/><h3>Displaying the results for the period:<br/>
+         $dateStartLabel - $dateEndLabel<br/></h3>";
          
-   echo "<br/><input type = 'submit' name = 'addIngredients' value = 'Save and Email'>
+   echo "<br/><input type = 'submit' class='btn btn-primary' name = 'addIngredients' value = 'Save and Email'>
               </input><br/><br/>";
 
 

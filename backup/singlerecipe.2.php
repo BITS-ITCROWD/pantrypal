@@ -14,11 +14,10 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
 <!--header.php-->
 <head>
     
-    
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
     
     <!--link to Bootstrap css stylesheets-->
-  <link rel="stylesheet" type="text/css" href="css/modal.css">
-  
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	
@@ -85,8 +84,6 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
          			   $fav_btn_name = "Add Favourite";
                			}
 	?>
-	
-	<title>Selected Recipe</title>
 	
 </head>
 
@@ -250,8 +247,6 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
          	
             	
                	<div>
-               	   
-               	   
                   
                                  <!-- Trigger/Open The Modal -->
                      <button id="lukemyBtn" class = "btn btn-primary">Add to Meal Planner</button></br></br>
@@ -277,53 +272,27 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                            
                            <input id="format" type="hidden" value="yy-mm-dd">
                            
-                           <div class = "row">
-                              
-                                 <div class = "col-md-8"><h5>Add this recipe to your meal plan. Just select a date and meal time.</h2></div>
+                        		<p>Date: <input type="text" id="datepicker" size="30" name="datepicker" required></p>
+                         
+               					<p>Meal:<br> 
+               					
+                     
                                  
-                           </div>
-                                 
-                           <div class = "row">
+                                 <select id="meal" name="mtime" required>
+                                   <option value="B">Breakfast</option>
+                                   <option value="L">Lunch</option>
+                                   <option value="D">Dinner</option>
+                                 </select>
                               
-                                 <div class = "col-md-5">
                               
-                           		   <h3>Date:  </h3><input type="text" id="datepicker" size="30" name="datepicker" required />
-                            
-                                 </div>
-                              
-                                 <div class = "col-md-2">
-                            
-                  					   <h3>Meal:  </h3> 
-                  					   
-                  					   <div id = "lukestyled">
-                  					
-                                       <select id="meal" name="mtime" required>
-                                         <option value="B">Breakfast</option>
-                                         <option value="L">Lunch</option>
-                                         <option value="D">Dinner</option>
-                                       </select>
-                                    
-                                    </div>
-                                    
-                                 </div>
-                                 
-                              </div>
-                              
-                              <div class = "row">
-                                 
-                                <div class = "col-md-2" style = "margin: 2em 0 2em 0">
-                                   
-                                    <input class = "btn btn-primary" type="submit" id="submitButton"  name="submitButton" value="Submit">
-                                    
-                                </div> 
-                               
-                               </div>
-                             
-                             
+                           </p> 
+                             <div>
+                                 <input type="submit" id="submitButton"  name="submitButton" value="Submit">
+                             </div> 
                              
                         </form>
                         
-                        <div id="successMessage" style="display: none;"><h3>You've successfully added it in there!</h3></div>
+                        <div id="successMessage" style="display: none;">You've successfully added it in there!</div>
                          
                      </div>
                      

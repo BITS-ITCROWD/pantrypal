@@ -88,26 +88,27 @@
 <head>
    <!-- seems to require its own style sheet-->
    <link rel="stylesheet" href="css/meal-plan-modal.css">
+   
 </head>
 
 <body>
+   
+   
 <?php
    // the body of the page is a message to the user stating success or failure
    echo "<div id='success-modal'>";
       echo "<div id='success-box'>";
       if($success == true){
-         echo "Your changes have been saved.";
-         echo "</br>";
-         echo "...returning to you meal planner now...";
+         echo "<p>Your changes have been saved.</p>";
+         echo "<p>...returning to you meal planner now...</p>";
       } else{
-         echo "Something went wrong. Please try to save again.";
-         echo "</br>";
-         echo "...returning to you meal planner now...";
+         echo "<p>Something went wrong. Please try to save again.</p>";
+         echo "<p>...returning to you meal planner now...</p>";
       }
       echo "</div>";
    echo "</div>";
    // returns back to the mealplan in a second
-   header("refresh:1; url=mealplan.php"); 
+   header("refresh:2; url=mealplan.php"); 
    
 ?>
 

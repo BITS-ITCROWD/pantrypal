@@ -1,15 +1,42 @@
+table, th,td{
+   border:1px solid black;
+   width:100%;
+   table-layout: fixed;
+}
 
 
+table{
+   margin-bottom: 5px;
+}
 
-table, th,td {
-   border: 1px solid black;
-}  
-   
 td {
    height:50px;
    width:70px;
 }
 
+/*the headings in the tables*/
+#week-day-heading, .mealLabel{
+   text-align: center;
+   font-weight: bold;
+   background-color: #C6C6C6;
+}
+
+/*the control table*/
+#controls table, #controls th, #controls td{
+   border:none;
+   width:100%;
+   table-layout: fixed;
+   text-align: center;
+}
+
+/*trash*/
+.glyphicon-trash{
+   color:red;
+   font-size:150%;
+   
+}
+
+/*recipe tips*/
 .tip {
    position: relative;
    display: inline-block;
@@ -23,14 +50,39 @@ td {
    text-align: center;
    border-radius: 6px;
    padding: 5px 0;
-   
-   /* Position the tooltip */
    position: absolute;
    z-index: 1;
+   word-wrap: break-word
 }
-
 
 .tip:hover .tiptext {
    visibility: visible;
 }
 
+/*datepicker width*/
+.hasDatepicker {
+   width: 90px;
+}
+
+/*control buttons*/
+.button{
+   width:70px;
+   height:50px;
+   background:#FF7D12;
+   border-radius: 5px;
+   -moz-border-radius: 5px;
+   -webkit-border-radius: 5px;
+   border:1px solid #787878 !important;
+   box-shadow:none !important;
+   color:black;
+   
+}
+
+.button:hover{
+   background:#FF7400;
+}
+
+.button:active{
+   background:#D96200;
+   border:1px dotted #FFFFFF !important;
+}

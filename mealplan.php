@@ -90,31 +90,36 @@
       include_once "sidebar.php";
       
       echo "<div class='col-sm-9' id='printable'>";
-      echo "<h2>Meal Planner</h2>";
+      echo "<h3>Meal Planner</h3>";
+      
       echo "<form id='form_planner' method='post' action='mealplan_savetotable.php'>";
-      echo "<span id = 'week-start-heading'>for the week starting: </span>";
+      echo "<h4><span id = 'week-start-heading'>for the week starting: </span></h4>";
       echo "<input type='hidden' name='date' id='date' value=''>";
       echo "<input type='hidden' name='user' id='user' value='".$userID."'>";
       echo "<div id='redips-drag'>";
       
       // table with controls
-      echo "<table style='width:100%'>";
+      echo "<table id ='controls'>";
       echo "<tr>";
-      echo "<td class='redips-mark'><button type='button' class='nav' id='back'>back</button></td>";
+      echo "<td class='redips-mark'><button type='button' class='nav button' id='back'>
+            <span class='glyphicon glyphicon-triangle-left'></span>back</button></td>";
       // display todays date on the first load
       $displayDate = date('d-m-Y',strtotime(Today));   
-      echo "<td class='redips-mark'>Please select new date:<p>Date: <input type='text' id='datepicker' value='$displayDate'</p></td>";
-      echo "<td class='redips-mark'><button type='button' id='reset'>reset</button></td>";
-      echo "<td class='redips-mark'><button type='button' id='list' onclick=\"seeMyList('mylist.php')\">See My List</td>";
-      echo "<td class='redips-mark'><button type='button' onclick=\"printThis('printable')\" >print planner</button></td>";
+      echo "<td class='redips-mark'>Select date:<p><input type='text' id='datepicker' value='$displayDate'</p></td>";
+      echo "<td class='redips-mark'><button class='button' type='button' id='reset'>reset</button></td>";
+      echo "<td class='redips-mark'><button class='button' type='button' id='list' onclick=\"seeMyList('mylist.php')\">view My List</td>";
+      echo "<td class='redips-mark'><button class='button' type='button' onclick=\"printThis('printable')\" >print</button></td>";
       echo "<td class='redips-mark'><input type='submit' class='button' value='save' name='save'/></td>";
-      echo "<td class='redips-trash'>trash bin</td>";
-      echo "<td class='redips-mark'><button type='button' class='nav' id='next'>next</button></td>";
+      echo "<td class='redips-trash'><span class='glyphicon glyphicon-trash'></span></br>trash bin</td>";
+      echo "<td class='redips-mark'><button type='button' class='nav button' id='next'>next
+            <span class='glyphicon glyphicon-triangle-right'></span></button></td>";
       echo "</tr>";
       echo "</table>";
       
+      
+      
       // create the current week planner headings
-      echo "<table id = 'week-day-heading' style='width:100%'>";
+      echo "<table id ='week-day-heading'>";
       echo "<tr>";
       echo "<td class='redips-mark'>MEAL</td>";
       echo "<td class='redips-mark'>Sun</td>";
@@ -128,19 +133,19 @@
       echo "</table>";
    
       // construct the planner detail rows (no data - this is added by ajax script)
-      echo "<table id='meal-data' style='width:100%'>";   
+      echo "<table id='meal-data'>";   
       echo "<tr>";
-      echo "<td class='redips-mark'>Breakfast</td>";
+      echo "<td class='redips-mark mealLabel'>Breakfast</td>";
       for($col=1; $col<=7; $col++) {
          echo "<td><div></div></td>";
       }
       echo "</tr>";
-      echo "<td class='redips-mark'>Lunch</td>";
+      echo "<td class='redips-mark mealLabel'>Lunch</td>";
       for($col=1; $col<=7; $col++) {
          echo "<td><div></div></td>";
       }
       echo "</tr>";
-      echo "<td class='redips-mark'>Dinner</td>";
+      echo "<td class='redips-mark mealLabel'>Dinner</td>";
       for($col=1; $col<=7; $col++) {
          echo "<td><div></div></td>";
       }
@@ -156,12 +161,12 @@
 
 
    <!-- Byrons Debug Code -->
-   <pre>
-     	<?php print_r ($_SESSION); ?>
-     	<?php print_r ($_POST); ?>
-     	<?php print_r ($_GET); ?>
-     	<?php print_r ($_COOKIE); ?>
-   </pre>
+   <!--<pre>-->
+   <!--  	<?php print_r ($_SESSION); ?>-->
+   <!--  	<?php print_r ($_POST); ?>-->
+   <!--  	<?php print_r ($_GET); ?>-->
+   <!--  	<?php print_r ($_COOKIE); ?>-->
+   <!--</pre>-->
 
 
 </body>

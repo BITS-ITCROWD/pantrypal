@@ -279,13 +279,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                            
                            <div class = "row">
                               
-                                 <div class = "col-md-8"><h5>Add this recipe to your meal plan. Just select a date and meal time.</h2></div>
-                                 
-                           </div>
-                                 
-                           <div class = "row">
-                              
-                                 <div class = "col-md-5">
+                                 <div class = "col-md-4">
                               
                            		   <h3>Date:  </h3><input type="text" id="datepicker" size="30" name="datepicker" required />
                             
@@ -323,7 +317,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                              
                         </form>
                         
-                        <div id="successMessage" style="display: none;"><h3>You've successfully added it in there!</h3></div>
+                        <div id="successMessage" style="display: none;">You've successfully added it in there!</div>
                          
                      </div>
                      

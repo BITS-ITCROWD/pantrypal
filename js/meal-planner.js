@@ -85,6 +85,7 @@ $(document).ready(function(){
       updateMealData(theID,2,"",pos);
    };
    
+
 });
 
 // JS FUNCTIONS
@@ -238,7 +239,7 @@ function updateMealData(ID,mode,comments,coords){
 // format the week day headings with dates
 function getWeekDayHead(sunday){
    var wdOutput ="";
-   wdOutput += "<table id = 'week-day-heading' style='width:100%'>";
+   wdOutput += "<table id = 'week-day-heading'>";
    wdOutput += "<tr>";
    wdOutput += "<td class='redips-mark'>MEAL</td>";
    wdOutput += "<td class='redips-mark'>Sun " + sunday.getDate() + "</td>";
@@ -307,7 +308,7 @@ function getNewPlanData(data,newSunday){
    
    //console.log("row is: " + row);
    // open the table
-   output += "<table id='meal-data' style='width:100%'>";
+   output += "<table id='meal-data'>";
 
    // get the mealplan json data
    var mealDate="";
@@ -359,7 +360,7 @@ function getNewPlanData(data,newSunday){
          }
          // the row title (ie breakfast, lunch etc)
          else if (b==0){
-            output += "<td class='redips-mark'>" + row[a][b] + "</td>";
+            output += "<td class='redips-mark mealLabel'>" + row[a][b] + "</td>";
          } 
          // the data itself   
          else{
@@ -368,14 +369,14 @@ function getNewPlanData(data,newSunday){
             // Capitalise the first letter of each word
             var recLongCap = capitalIdea(recSplit[0]);
             // replace special chars
-            var recLen = 20;
+            var recLen = 25;
             var recShort = getAbbreviated(recLongCap,recLen);
             
            
             // NOTE - vary the length as needed
             
             // do the same for user comments
-            var commLen = 15;
+            var commLen = 20;
             var recCommLg = recSplit[1];
             var recCommSh = getAbbreviated(recCommLg,commLen);
 

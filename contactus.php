@@ -1,27 +1,13 @@
 <!DOCTYPE html>
-
-<html lang="en">
-   
 <?php
-
-   include("config.php");
-   
-   //Add header
+   session_start();
    include_once "header.php";
-   
 ?>
 
 <head>
    <title>Contact Us</title>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<style type="text/css">
-    .bs-example{
-    	margin: 20px;
-    }
-</style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -31,10 +17,10 @@
       </div>
       <!-- Email - LHS-->
       <div id=""class="col-sm-6">
-         <p>Email:</p>
-         <p>admin@pantrypal.com.au</p>
+         <p><strong>Email:</strong></p>
+         <p><a>admin@pantrypal.com.au</a></p>
          <br>
-         <p>Or use our contact form and we will contact you</p>
+         <p><strong>Or use our contact form and we will contact you</strong></p>
       </div>
       <!-- Contact Form - RHS-->
       <div class="col-sm-6">

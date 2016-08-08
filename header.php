@@ -83,7 +83,7 @@ More to do
           
           echo '<p class="navbar-text navbar-right">'.
                'Hi '.$user_welcome; 
-          echo '! |<a href="logout.php" class="navbar-link">Logout</a></p>';
+          echo '! | <a href="logout.php" class="navbar-link">Logout</a></p>';
           ?>
           
           <!--navigation-->
@@ -105,7 +105,7 @@ More to do
               
             <?php echo '<p class="navbar-text navbar-right">'.
                '<a href="login.php" class="navbar-link">Login</a>';
-            echo ' |<a href="registeruser.php" class="navbar-link">Register</a></p>';
+            echo ' | <a href="registeruser.php" class="navbar-link">Register</a></p>';
           ?>
           
             <!--navigation-->

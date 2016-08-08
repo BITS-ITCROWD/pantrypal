@@ -1,0 +1,16 @@
+.main{
+   list-style: none;
+   margin-left:3%; 
+   font-size:105%; 
+   margin-top:10px;
+   font-weight: bold;
+}
+
+.idented{
+   list-style: none;
+   margin-left:7%;      
+}
+
+#note{
+   font-style:italic;
+}
