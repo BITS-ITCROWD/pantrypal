@@ -30,5 +30,21 @@
         "5": "53",
         "recipeName": "Agnolotti with creamy pesto chicken",
         "6": "Agnolotti with creamy pesto chicken"
+    },
+    {
+        "entryID": "106",
+        "0": "106",
+        "userID": "20",
+        "1": "20",
+        "mealDate": "2016-08-18",
+        "2": "2016-08-18",
+        "mealTime": "L",
+        "3": "L",
+        "userNote": "NULL",
+        "4": "NULL",
+        "recipeNumber": "79",
+        "5": "79",
+        "recipeName": "Almond & orange syrup cupcakes",
+        "6": "Almond & orange syrup cupcakes"
     }
 ]

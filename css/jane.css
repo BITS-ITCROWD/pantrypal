@@ -1,0 +1,132 @@
+/*style sheet 
+
+Jane Geard: sources of information for the following image styles and header 
+navigation styles:
+http://www.w3schools.com/css/css_rwd_images.asp
+https://www.lynda.com/Bootstrap-tutorials/Offsetting-columns/417641/429432-4.html
+http://www.w3schools.com/cssref/pr_margin.asp
+*/
+
+
+/*image styles*/
+
+.logo {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin-top: -7px;   /* http://stackoverflow.com/questions/18474564/bootstrap-3-navbar-with-logo
+                       Align the logo with the navbar
+                       */
+  
+   }
+
+/*header navigation styles 
+
+changes the login in /sign up text links to white*/
+
+.navbar-link {
+   color: #FFFFFF !important;
+}
+
+.navbar-text {
+   color: #FFFFFF !important;
+}
+
+/*changes the navigation menu to blue removes bottom margin caused by jumbotron*/
+
+.navbar {
+   background-color: #0099CC !important;
+   margin-bottom: 0 !important;
+ 
+}
+
+/*remove the negative margin on the far right navigation items */
+
+@media (min-width: 768px) {
+.navbar-right {
+   margin-right: 0px !important;
+   }
+}
+
+/*changes the nav text to white*/
+
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF !important;
+}
+
+
+/*changes the nav text to black on hover*/
+
+.navbar-default .navbar-nav > li > a:hover {
+    color: #000000 !important;
+    background-color: transparent !important;
+}
+
+/*changes the active nav menu item to dark blue */
+
+.navbar-default .navbar-nav>.active>a {
+   
+   background-color: #0066CC !important;
+}
+
+
+/* To stop footer overlapping content. 
+source: http://stackoverflow.com/questions/26336190/bootstrap-sticky-footer-overlapping-content
+*/
+
+body {
+    padding-bottom: 70px;
+}
+
+
+/*footer styles
+
+changes the footer to green */
+
+.footer {
+   background-color:#00CC00 !important;
+
+}
+
+/*sidebar styles
+
+changes the sidebar button text to white*/
+
+
+.btn>a {
+    color: #FFFFFF !important;
+}
+    
+/*adds padding taken away for jumbotron*/    
+    
+#sidebar {
+   
+   padding-top: 20px !important;
+   
+}
+
+/* main content styles*/
+
+/*provides additional padding between the main content headings and the search bar*/
+   
+.col-sm-9 {
+   padding-left: 20px !important;
+}
+
+/*provides additional screen space*/
+
+.container {
+   padding-left: 0 !important;
+   padding-right: 0 !important;
+}
+
+
+/*Pushes the text to the top of the div*/
+
+#register h2{
+   margin-top:0 !important;
+   
+}
+
+
+

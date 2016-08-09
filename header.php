@@ -90,7 +90,7 @@ More to do
           
           <div class="collapse navbar-collapse" id="collapsemenu">
             <ul class="nav navbar-nav navbar-right">
-            <li class="<?php if($page == 'index.php' || $page =='dashboard.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='dashboard.php'>Home</a></li>
+            <li class="<?php if($page == 'index.php' || $page =='index.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='index.php'>Home</a></li>
             <li class="<?php if($page == 'recipes.php'|| $page =='favourites.php'|| $page =='singlerecipe.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='recipes.php'>Recipes</a></li>
             <li class="<?php if($page == 'mealplan.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='mealplan.php'>Meal Plan</a></li>
             <li class="<?php if($page == 'mylist.php'|| $page =='IngredList.php') : ?> active <?php else : ?>noactive <?php endif;?>"><a href='mylist.php'>My List</a></li></ul> 

@@ -35,7 +35,7 @@ Jane Geard 20/07/2016: Enable login with new user
 				$_SESSION['login_success'] = $results['username'];
 				$_SESSION['login_userid'] = $results['ID'];
 				$_SESSION['firstname'] = $results['firstname'];
-				header('location:dashboard.php');
+				header('location:index.php');
 				exit;
 			}else{
 				$errMsg .= 'Username and Password are not found';

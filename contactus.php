@@ -7,7 +7,11 @@
 <head>
    <title>Contact Us</title>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
+   
+   <!--link to Bootstrap css stylesheets-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--link to our override css stylesheet-->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>

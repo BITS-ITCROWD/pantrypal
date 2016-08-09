@@ -1,43 +1,58 @@
 #main-content {
-   border:solid thin green;
    text-align: center;
 }
 
+
 #stepOne {
+   padding: 5px;
 }
 
 #stepNumber {
-   border: solid thin blue;
    float: left;
    width: 45px;
 }
 #stepInstructions {
-   border: solid thin red;
    height: 100px;
    overflow: hidden;
 }
 #stepsContent {
-   margin: auto;
-   border: solid thick red;
    
+   background-color: #00CC00;
    min-height: 100px;
    overflow: hidden;
-   padding: 10px 0 10px 10px;
+   padding: 10px 0 10px 15px;
 }
 
 #stepsContent .steps {
    float:left; 
-   margin: 0 0 0 20px; 
-   min-width: 245px;
-   max-width: 245px;
-   /**width: 30%; **/
+   margin: 10px 0 15px 20px; 
+   width: 245px;
    height: 100px;
-   background:#CBC5C4; 
+   background:#FFFFFF; 
    padding:0 0 27px 0;
    
 }
-#stepContent .steps:first-child {
-   margin:0;
-   padding: 0;
+#stepsContent .steps:first-child {
+   margin-left: 28px;
+}
+
+#suggestedRecipes {
+   margin: 10px 0 0 0;
+   min-height: 100px;
+   overflow: hidden;
+   padding: 10px 0 10px 15px;
+   background:#0099CC; 
+}
+
+#suggestedRecipes .recipe {
+   float:left; 
+   margin: 10px 0 15px 20px; 
+   width: 245px;
+   height: 230px;
    
+   background:#FFFFFF; 
+   padding:10px 0 5px 0;
+}
+#suggestedRecipes .recipe:first-child {
+   margin-left: 28px;
 }

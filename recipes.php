@@ -14,6 +14,7 @@
 ?>
 
 <head>
+   <link href="css/mark.css" rel="stylesheet">
    <title>Recipes</title>
 </head>
 
@@ -24,9 +25,10 @@
    
    <?php include_once "sidebar.php"; ?> <!--jane moving sidebar within content container-->
    
-   <div class="col-sm-9" >
+   <div id="main-content" class="col-sm-9" >
       
-   <h3>Search  Recipes</h3> 
+   <br>
+   <h1>Search  Recipes</h1> 
    <p></p> 
    <form  method="post" action="recipes.php?go"  id="searchform"> 
       <input  type="text" name="searchEntry" placeholder="  Search.."> 
@@ -34,8 +36,6 @@
          <span class="glyphicon glyphicon-search"></span> Search
       </button>
    </form> 
-   
-   
    
    <?php
    
@@ -103,10 +103,10 @@
               echo "<br>";
             }
                
-            echo "<img src='$recipeImage' width='50' height='50'>";
+            echo "<img src='$recipeImage' width='80' height='80'>";
             $link_address = "singlerecipe.php?rid=$recipeNumber";
             echo "<a href='".$link_address."'>     $recipeName</a>";
-            echo "<br>";
+            echo "<br><br>";
             $i++;
          }
          
@@ -130,9 +130,108 @@
       
    } 
    
-   echo '<br><br>';
+   echo '<br>';
    
    ?>
+   
+         <h3>Or try one of these</h3>
+         
+         <div class="container">
+            <div id="suggestedRecipes" class="col-sm-9">
+               <div id="recipeOne" class="recipe col-md-3">
+                  <?php 
+                  // Get recipe information
+                  $searchQuery = $db->query("SELECT * FROM recipe");
+            
+                  // Count recipes and generate random number
+                  $recipe_count = $searchQuery->rowCount();
+               
+                  $randomNumber= rand(1,$recipe_count);
+            
+                  // Values for while loop below
+                  $j=0;
+            
+                  while($r = $searchQuery->fetch()) {
+                     $j++;
+               
+                     // Get details for random recipe      
+                     if($j==$randomNumber) {
+                        $recipeNumber = $r['recipeNumber'];
+                        $recipeName = $r['recipeName'];
+                        $recipeImage =$r['imageURL'];
+                  
+                        $link_address = "singlerecipe.php?rid=$recipeNumber";
+                        echo "<a href='".$link_address."'><img src='$recipeImage' width='150' height='150'></a>";
+                        echo "<br><br>";
+                        echo "<a href='".$link_address."'>     $recipeName</a>"; 
+                     }
+                  }
+                  ?>
+               </div>
+               <div id="recipeTwo" class="recipe col-md-3">
+                  <?php 
+                  // Get recipe information
+                  $searchQuery = $db->query("SELECT * FROM recipe");
+            
+                  // Count recipes and generate random number
+                  $recipe_count = $searchQuery->rowCount();
+               
+                  $randomNumber= rand(1,$recipe_count);
+            
+                  // Values for while loop below
+                  $j=0;
+            
+                  while($r = $searchQuery->fetch()) {
+                     $j++;
+               
+                     // Get details for random recipe      
+                     if($j==$randomNumber) {
+                        $recipeNumber = $r['recipeNumber'];
+                        $recipeName = $r['recipeName'];
+                        $recipeImage =$r['imageURL'];
+                  
+                        $link_address = "singlerecipe.php?rid=$recipeNumber";
+                        echo "<a href='".$link_address."'><img src='$recipeImage' width='150' height='150'></a>";
+                        echo "<br><br>";
+                        echo "<a href='".$link_address."'>     $recipeName</a>"; 
+                     }
+                  }
+                  ?>
+               </div>
+               <div id="recipeThree" class="recipe col-md-3">
+                  <?php 
+                  // Get recipe information
+                  $searchQuery = $db->query("SELECT * FROM recipe");
+            
+                  // Count recipes and generate random number
+                  $recipe_count = $searchQuery->rowCount();
+               
+                  $randomNumber= rand(1,$recipe_count);
+            
+                  // Values for while loop below
+                  $j=0;
+            
+                  while($r = $searchQuery->fetch()) {
+                     $j++;
+               
+                     // Get details for random recipe      
+                     if($j==$randomNumber) {
+                        $recipeNumber = $r['recipeNumber'];
+                        $recipeName = $r['recipeName'];
+                        $recipeImage =$r['imageURL'];
+                  
+                        $link_address = "singlerecipe.php?rid=$recipeNumber";
+                        echo "<a href='".$link_address."'><img src='$recipeImage' width='150' height='150'></a>";
+                        echo "<br><br>";
+                        echo "<a href='".$link_address."'>     $recipeName</a>"; 
+                     }
+                  }
+                  ?>
+               </div>
+            </div>
+            
+         </div>
+
    </div>
    </div>
    <?php include_once "footer.php"; ?>
