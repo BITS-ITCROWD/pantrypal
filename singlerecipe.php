@@ -16,7 +16,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
     
     
     
-    <!--link to Bootstrap css stylesheets-->
+    <!--link to modal stylesheets-->
   <link rel="stylesheet" type="text/css" href="css/modal.css">
   
   
@@ -28,6 +28,8 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
   
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+   <!-- date picker borrowed from https://jqueryui.com/datepicker/ for educational purposes -->
 
   <script>
   $( function() {
@@ -104,13 +106,13 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
 	
 	   <!-- LEFT NAV MENU -->
 	
-   	<div class="col-md-2">
+   	<!--<div class="col-md-2">-->
       	<?php
       	
       	include_once "sidebar.php";
       	
       	?>
-   	</div>
+   	<!--</div>-->
 	
    	<!-- MIDDLE SECTION - main contents of page -->
    	
@@ -260,6 +262,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                	   
                   
                                  <!-- Trigger/Open The Modal -->
+                                 <!-- modal borrowed from http://www.w3schools.com/howto/howto_css_modals.asp for educational purposes -->
                      <button id="lukemyBtn" class = "btn btn-primary">Add to Meal Planner</button></br></br>
                      
                      
@@ -278,7 +281,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                        <div class="lukemodal-content">
                          <span class="lukeclose">x</span>
                          
-                      <!-- borrowed from https://jqueryui.com/datepicker/#animation on 28/6 -->
+                      <!-- borrowed from https://jqueryui.com/datepicker/#animation on 28/6 for educational purposes -->
                      
                         <form id="formoid" action="addtomealplan.php" title="" method="post">
                            
@@ -337,7 +340,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                   </div>
                      	 
              
-                     <!-- submit script -->
+                     <!-- submit script borrowed from http://stackoverflow.com/questions/16323360/submitting-html-form-using-jquery-ajax for educational purposes -->
       
                      <script type='text/javascript'>
                          /* attach a submit handler to the form */
@@ -362,7 +365,7 @@ if(!isset($_SESSION['login_success'])){ //if login in session is not set
                      </script>
                      
                      
-                    <!-- modal script -->
+                    <!-- modal script borrowed from http://www.w3schools.com/howto/howto_css_modals.asp for educational purposes -->
                      <script>
                      // Get the modal
                      var modal = document.getElementById("lukemyModal");

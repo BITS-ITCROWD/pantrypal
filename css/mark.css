@@ -2,7 +2,16 @@
    text-align: center;
 }
 
+/* Recipes page*/
+#searchResults {
+   text-align: left;
+}
+/* contactus.php*/
+#contactContent h1 {
+   text-align: center;
+}
 
+/* index.php logged in*/
 #stepOne {
    padding: 5px;
 }
@@ -16,8 +25,7 @@
    overflow: hidden;
 }
 #stepsContent {
-   
-   background-color: #00CC00;
+   background-color: #16a950;
    min-height: 100px;
    overflow: hidden;
    padding: 10px 0 10px 15px;
@@ -26,16 +34,17 @@
 #stepsContent .steps {
    float:left; 
    margin: 10px 0 15px 20px; 
-   width: 245px;
-   height: 100px;
+   width: 250px;
+   height: 113px;
    background:#FFFFFF; 
-   padding:0 0 27px 0;
+   padding:5px 5px 27px 5px;
    
 }
 #stepsContent .steps:first-child {
    margin-left: 28px;
 }
 
+/* index.php logged in and recipes.php*/
 #suggestedRecipes {
    margin: 10px 0 0 0;
    min-height: 100px;
@@ -48,11 +57,16 @@
    float:left; 
    margin: 10px 0 15px 20px; 
    width: 245px;
-   height: 230px;
+   height: 240px;
    
    background:#FFFFFF; 
    padding:10px 0 5px 0;
 }
 #suggestedRecipes .recipe:first-child {
    margin-left: 28px;
+}
+
+/*changes the button text to white*/
+.btn-default {
+    color: #FFFFFF !important;
 }

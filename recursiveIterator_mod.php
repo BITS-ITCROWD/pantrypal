@@ -1,7 +1,7 @@
 <?php
 
 //table maker function to be extended for drawing iteratively - added by Luke 26/06
-
+// recursive iterator borrowed from http://stackoverflow.com/questions/27280434/display-data-in-mysql-table-newest-to-old for educational purposes
 
 
 class TableRows extends RecursiveIteratorIterator { 

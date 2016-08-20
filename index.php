@@ -4,15 +4,18 @@ Jane Geard 30/06/2016: Added a welcome section with text.
 Amended the format of the login and added register button. Still more work to
 do on layout.
 Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
+Jane Geard 15/08/2016: Adding references / sources for my code - Rows 10 to 114
 -->
-
 <!DOCTYPE html>
 <?php
+	ob_start();  //http://stackoverflow.com/questions/9707693/warning-cannot-modify-header-information-headers-already-sent-by-error
    include("config.php");
    //adds the header
    include_once "header.php";
    
    session_start();
+   
+   //modified Byron's original code to suit our requirements and layout
    
  if(isset($_POST['submit'])){
 		$errMsg = '';
@@ -37,7 +40,7 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
 				$_SESSION['login_success'] = $results['username'];
 				$_SESSION['login_userid'] = $results['ID'];
 				$_SESSION['firstname'] = $results['firstname'];
-				header('location:index.php');
+				header('location: index.php');
 				exit;
 			}else{
 				$errMsg .= 'Username and Password are not found';
@@ -52,10 +55,12 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
 </head>
 
 <body>
+	
 	<?php // NOT LOGGED IN
 	if(!isset($_SESSION['login_success'])){ ?>
 	
       <!-- Welcome message-->
+      <!--http://www.w3schools.com/bootstrap/bootstrap_ref_css_images.asp>-->
 		<div class="jumbotron">
 			<div class="container text-center">
 		  		<h1>Welcome to <img class ="img-responsive center-block" alt="PantryPal Logo" src="/images/pantrypal_logo_transparent.png"></h1>
@@ -73,17 +78,20 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
 
 		<div class="container">
 		   <!--Row with two equal columns-->
+		   <!--http://v4-alpha.getbootstrap.com/layout/grid/-->
      		<div class="row">
      	   	<div class="col-sm-2"> </div>
         
         			<div class="col-sm-4 form-group"><!--Column left-->
 		      	
+		      	<!--change of colour and font error message taken from Byron's original login code-->
 		      	<?php
 						if(isset($errMsg)){
 							echo '<div style="color:#FF0000;text-align:center;font-size:12px;">'.$errMsg.'</div>';
 						}
 					?>
 					
+					<!--http://www.w3schools.com/bootstrap/bootstrap_forms.asp-->
    				<form action ="" method ="post">
 		    	   	<input type="email" class="form-control" placeholder="Email" name="username" required></br>
 		        	 	<input type="password" class="form-control" placeholder="Password" name="password" required></br>
@@ -106,11 +114,16 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
    <?php } 
    
    // LOGGED IN
-	if(isset($_SESSION['login_success'])){ ?>
+	if(isset($_SESSION['login_success'])){?>
 	
-   	<?php include_once "sidebar.php"; ?>
+   	
    
    	<div class="container">  <!-- Container for the whole content section -->
+   	
+   	<?php include_once "sidebar.php"; ?> <!--Jane adding sidebar within main content container-->
+	   
+	   <!-- index.php logged in from here down -->
+	   
 	      <div id="main-content" class="col-sm-9" >
          	<h1>Welcome to PantryPal</h1>
          	<h3>It's as easy as...</h3>
@@ -136,7 +149,7 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
             	</div>
             	<div id="stepTwo" class="steps col-md-3">
 	               <div id="stepNumber">
-                  	<img src="/images/numberOne.png">
+                  	<img src="/images/numberTwo.png">
                	</div>
                	<div id="stepInstructions">
 	                  <p>Plan your meals by adding recipes to your Meal Planner </p>
@@ -145,7 +158,7 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
             	</div>
             	<div id="stepThree" class="steps col-md-3">
 	               <div id="stepNumber">
-                  	<img src="/images/numberOne.png">
+                  	<img src="/images/numberThree.png">
                	</div>
                	<div id="stepInstructions">
 	                  <p>View, print or email your shopping list</p>
@@ -256,7 +269,7 @@ Jane Geard 20/07/2016: Modified to store firstname variable and changed :demo
       	</div>
    	</div>
 	   
-	   <?php include_once "footer.php"; ?>
+	   
 	
       
    <?php } ?>

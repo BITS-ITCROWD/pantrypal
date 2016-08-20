@@ -27,6 +27,8 @@
      
    </script>
    
+
+   
 </head>
 
 <body>
@@ -56,7 +58,7 @@
       
       <?php include_once("sidebar.php");?> <!--sidebar needs to be within container of main content-->
    
-<div class='col-sm-9'> <!--Jane moving this div class to the start of the main content for alignment
+<div class='col-sm-10'> <!--Jane moving this div class to the start of the main content for alignment
                            with sidebar-->
 
 <h3>My List</h3>
@@ -80,9 +82,6 @@
 
 <form action="IngredList.php" method="post">
 
-
-
-
 <?php 
 
 // Will - I have added inclusive start and end dates to the sql. 
@@ -101,20 +100,27 @@ if(isset($_POST['date']) && $_POST['date']!=""){
          
    echo "<br/><input type = 'submit' class='btn btn-primary' name = 'addIngredients' value = 'Save and Email'>
               </input><br/><br/>";
-
-
+   
+   echo "<p><label><input type='checkbox' id='checkAll'/> Check All/None</label></p>";
+   echo "<fieldset>";
    // SQL query returning ingredients for the sleceted date range
    foreach ($db->query("SELECT ingredient FROM ingredient WHERE recipeNumber IN 
       (SELECT recipeNumber FROM meal_planner WHERE mealDate >= '".$dateStart."' and mealDate <= '".$dateEnd."' and userID =".$userID.")") as $row)
       {
          $ingredient = $row ['ingredient'];
-         echo "<label for='list'></label><input type='checkbox' name ='list[]' value = '$ingredient'
-                checked='checked'></input>";
+         echo "<label for='list'><input type='checkbox' name ='list[]' value = '$ingredient'> </input></label>";
          echo "$ingredient <br/>";
    }
+   echo"</fieldset>";
          
 }
 ?>
+   <!-- Check all boxes jQuery sourced from this site http://jsfiddle.net/NogginBox/ScnQT/1/ --->
+   <script type="text/javascript">
+      $("#checkAll").change(function () {
+         $("input:checkbox").prop('checked', $(this).prop("checked"));
+      });
+   </script>
 </div>
 </form>   
 </div> <!--jane closing container-->

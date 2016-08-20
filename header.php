@@ -11,13 +11,17 @@ Corrected home link when logged in to Dashboard
 Jane Geard 20/07/16 - Modified welcome message to display first name
 Jane Geard 26/07/16 - Modified navigation to be active depending on the page
 Jane Geard 02/08/16 - Added link to javascript, the logo, collapsable hamburger, nav colour. 
-More to do
+Jane Geard 11/08/16 - Add a reference to the source of data on the website
+Jane Geard 15/08/2016 - adding references and sources of info for code
+
 -->
+<!--All recipe data and images displayed on the website have been scraped from
+www.taste.com.au and are used for educational purposes only-->
 
 <!DOCTYPE html> <!--indicates that this is a html5 document type to the browser-->
 <html lang="en">
   
-<!--header.php-->
+<!--header.php    http://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
 <head>
     <!--Compatible with earlier versions of IE-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +43,7 @@ More to do
     <script src="js/bootstrap.min.js"></script>
   
 </head>
-
+<!--http://getbootstrap.com/components/#navbar-->
 <body>
   <div id = "header">
     <nav class="navbar navbar-default">
@@ -68,8 +72,9 @@ More to do
         <?php
           session_start();
     
+          //http://stackoverflow.com/questions/13032930/how-to-get-current-php-page-name
           $user_welcome = ' (Guest)';
-          $page = basename($_SERVER['PHP_SELF']);
+          $page = basename($_SERVER['PHP_SELF']); 
           
           //If logged in
           
@@ -86,7 +91,7 @@ More to do
           echo '! | <a href="logout.php" class="navbar-link">Logout</a></p>';
           ?>
           
-          <!--navigation-->
+          <!--navigation--http://stackoverflow.com/questions/13336200/add-class-active-to-active-page-using-php>-->
           
           <div class="collapse navbar-collapse" id="collapsemenu">
             <ul class="nav navbar-nav navbar-right">

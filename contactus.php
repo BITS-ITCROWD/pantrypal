@@ -6,6 +6,7 @@
 
 <head>
    <title>Contact Us</title>
+   <link href="css/mark.css" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
    
    <!--link to Bootstrap css stylesheets-->
@@ -16,11 +17,12 @@
 
 <body>
    <div class="container">
-      <div class="col-sm-12" >
+      <div id="contactContent" class="col-sm-12" >
          <h1>Contact Us</h1>
+         <br>
       </div>
       <!-- Email - LHS-->
-      <div id=""class="col-sm-6">
+      <div class="col-sm-6">
          <p><strong>Email:</strong></p>
          <p><a>admin@pantrypal.com.au</a></p>
          <br>

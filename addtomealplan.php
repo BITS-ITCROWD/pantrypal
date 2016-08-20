@@ -1,5 +1,7 @@
 <?php
 
+//by Luke - all of my own code
+
 include("config.php");
 
 session_start();

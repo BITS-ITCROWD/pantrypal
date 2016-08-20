@@ -89,7 +89,7 @@
       echo "<div class='container'>";
       include_once "sidebar.php";
       
-      echo "<div class='col-sm-9' id='printable'>";
+      echo "<div class='col-sm-10' id='printable'>";
       echo "<h3>Meal Planner</h3>";
       
       echo "<form id='form_planner' method='post' action='mealplan_savetotable.php'>";
@@ -108,7 +108,7 @@
       echo "<td class='redips-mark'>Select date:<p><input type='text' id='datepicker' value='$displayDate'</p></td>";
       echo "<td class='redips-mark'><button class='button' type='button' id='reset'>reset</button></td>";
       echo "<td class='redips-mark'><button class='button' type='button' id='list' onclick=\"seeMyList('mylist.php')\">view My List</td>";
-      echo "<td class='redips-mark'><button class='button' type='button' onclick=\"printThis('printable')\" >print</button></td>";
+      echo "<td class='redips-mark'><button class='button' type='button' onclick=\"printThis()\" >print</button></td>";
       echo "<td class='redips-mark'><input type='submit' class='button' value='save' name='save'/></td>";
       echo "<td class='redips-trash'><span class='glyphicon glyphicon-trash'></span></br>trash bin</td>";
       echo "<td class='redips-mark'><button type='button' class='nav button' id='next'>next
@@ -153,7 +153,7 @@
       echo "</table>";
       echo "</div>";  // redips-drag div
       echo "</form>";
-      echo "</div>";  // col-sm-9 div
+      echo "</div>";  // col-sm-10 div
       echo "</div>";  // container div
       
       include_once "footer.php"; 

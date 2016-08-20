@@ -1,3 +1,5 @@
+<!--this code was written by Byron to get us started-->
+
 <?php
 //DB config
 define('_HOST_NAME_', 'localhost');

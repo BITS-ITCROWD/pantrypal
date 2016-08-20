@@ -440,12 +440,8 @@ function dateDiff(a, b) {
 } 
 
 // print the planner
-function printThis(area) {
-   var printable = document.getElementById(area).innerHTML;
-   var content = document.body.innerHTML;
-   document.body.innerHTML = printable;
+function printThis() {
    window.print();
-   document.body.innerHTML = content;
 }
 
 // submit to the mylist page with dates

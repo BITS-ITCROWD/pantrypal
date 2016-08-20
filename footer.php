@@ -4,7 +4,10 @@ Jane Geard 28/06/2016: Created footer page with links and copyright
 Jane Geard 11/07/2016: Modified layout so that footer comes after the
 sidebar and main body of text.
 Jane Geard 03/08/2016: Updated to include fixed footer and collapsible menu
+Jane Geard 15/08/2016: Added references / sources for code
 -->
+
+<!--http://www.w3schools.com/bootstrap/bootstrap_get_started.asp-->
 
 <!DOCTYPE html> <!--indicates that this is a html5 document type to the browser-->
 <html lang="en">

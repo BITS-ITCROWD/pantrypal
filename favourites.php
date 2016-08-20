@@ -4,6 +4,7 @@ Jane Geard 25/07/2016: Create base bage layout
 Jane Geard 26/07/2016: Added retrieval of favourites based on user signed in.
 Used quite a bit of Mark's code from recipes.php for the pagination 
 and adapted it to fit with the requirements of this page
+Jane Geard 15/08/2016: Added references / sources for code
 -->
 
 <!DOCTYPE html>
@@ -24,7 +25,7 @@ and adapted it to fit with the requirements of this page
    <div class="container">
    <?php include_once "sidebar.php"; ?>
    
-   <div class="col-sm-9" >
+   <div class="col-sm-10" >
       
 <?php
 
@@ -33,11 +34,12 @@ and adapted it to fit with the requirements of this page
    
    // retrieve user's favourites
     $records = $db->prepare('SELECT recipe.* FROM favourites, recipe WHERE userid = :userid 
-                              and favourites.recipeNumber = recipe.recipeNumber');
+                              and favourites.recipeNumber = recipe.recipeNumber
+                              order by recipe.recipeName');
                			$records->bindParam(':userid', $userID);
                			$records->execute();
                			
-   //Borrowed Mark's recipe retrieval code
+   //Borrowed Mark's recipe retrieval code from recipes.php 
    
    // Check page number
    $requested_page =($_GET['page']) ? intval($_GET['page']) : 1;

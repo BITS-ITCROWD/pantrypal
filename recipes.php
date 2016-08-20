@@ -97,17 +97,21 @@
             $recipeNumber = $r['recipeNumber'];
             $recipeName = $r['recipeName'];
             $recipeImage =$r['imageURL'];
+            
+            ?> <div id="searchResults"> <?php
                
             if((($requested_page>1)&&($i%$products_per_page==0))||$i==1) {
               echo "<br><p>Showing search results for \"".$searchEntry."\"</p>";
               echo "<br>";
             }
-               
+            
             echo "<img src='$recipeImage' width='80' height='80'>";
             $link_address = "singlerecipe.php?rid=$recipeNumber";
             echo "<a href='".$link_address."'>     $recipeName</a>";
             echo "<br><br>";
             $i++;
+            
+            ?> </div> <?php
          }
          
          // Break the loop when $products_per_page has been reached      

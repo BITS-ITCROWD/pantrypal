@@ -56,7 +56,7 @@
 }
 
 #lukestyled select {
-   background: transparent;
+   background: rgba(0,153,204,0.6);/*transparent; added a background colour*/
    border: none;
    font-size: 14px;
    height: 29px;

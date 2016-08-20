@@ -17,7 +17,7 @@ Added a check that the username does not already exist in the database
    session_start();
 
 
-
+//adapted from Byron's original code on index.php provided at the start of the unit
 if(isset($_POST['submit']))
 {
    $errMsg = "";
@@ -68,7 +68,7 @@ if(isset($_POST['submit']))
       				$_SESSION['login_success'] = $username;
                   $_SESSION['firstname'] = $firstname;
                   $_SESSION['login_userid'] = $results['ID'];
-      				header('location:dashboard.php');
+      				header('location:index.php');
       				exit;
       			}
             }
@@ -87,15 +87,17 @@ if(isset($_POST['submit']))
 		<div class="container text-center">
 	  		<h2>Register New User</h2>
       
-      
+      <!--http://stackoverflow.com/questions/20853066/how-to-center-form-in-bootstrap-3-->
       <div class="col-md-4 col-md-offset-4">
+	
+	            <!--change of colour and font error message taken from Byron's original login code-->
 	
 		      	<?php
 						if(isset($errMsg)){
 							echo '<div style="color:#FF0000;text-align:center;font-size:12px;">'.$errMsg.'</div>';
 						}
 					?>
-					<!--form to register sign up details-->
+					<!--form to register sign up details 	http://www.w3schools.com/bootstrap/bootstrap_forms.asp-->
 				<form action = "" method="post">
 		    	  <input type="text" class="form-control" placeholder="First Name" name="firstname" value="<?php echo $firstname;?>" required></br>
 		    	  <input type="text" class="form-control" placeholder="Last Name" name="lastname" value="<?php echo $lastname;?>"  required></br>
