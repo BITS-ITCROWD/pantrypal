@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--written by Paul Gauci s3529106 2016. Please note that this page also uses JQuery UI Accordian script.-->
 <?php
    session_start();
    include_once "header.php";
@@ -27,8 +28,6 @@
       });
    });
   </script>
-
-
 
 </head>
 
@@ -145,6 +144,7 @@
          </div>
       </div>
    </div>
+   
 <?php include_once "footer.php"; ?>   
    
 </body>

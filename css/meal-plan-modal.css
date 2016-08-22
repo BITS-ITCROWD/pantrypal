@@ -1,3 +1,6 @@
+/*written by Paul Gauci s3529106 2016. This is the styling for the modal-like */
+/*confirmation window when the user saves their meal planner data. */
+
 #success-modal {
 	position: fixed;
 	top:0;

@@ -1,4 +1,4 @@
-// JS written for the mealplan page - Paul Gauci 2016
+// JS written for the mealplan page - Paul Gauci s3529106 2016
 
 // set some variables
 globalMealTime = new Array;
@@ -64,10 +64,10 @@ $(document).ready(function(){
       // call the func to save to new json
       updateMealData(theID,3,"",0);
       var xxx = "gone !";
-      console.log(theID + " was deleted and is now ... " + xxx);
+      //console.log(theID + " was deleted and is now ... " + xxx);
    };
    
-   // resips - item dragged and dropped
+   // redips - item dragged and dropped
    rd.event.dropped = function () {
       // get the id of the item being moved           
       var theID = getRDid();
@@ -173,8 +173,8 @@ function updateMealData(ID,mode,comments,coords){
    
          var currJSONStr = JSON.stringify(data);
          var currJSONObj = JSON.parse(currJSONStr);
-         console.log("got the current json");
-         console.log(currJSONObj);               
+         //console.log("got the current json");
+         //console.log(currJSONObj);               
          
          switch (mode){
             // update comments
@@ -209,7 +209,7 @@ function updateMealData(ID,mode,comments,coords){
                }
                break;
             
-            // remove/trash a recipe
+            // delete/trash a recipe
             case 3:
                for (var i=0; i<currJSONObj.length; i++) {
                   if (currJSONObj[i].entryID == ID) {
@@ -262,7 +262,7 @@ function getWeekDayHead(sunday){
 }
 
  
-// this is called on page load only to get the meal time reference data
+// this is called on page load only to get the meal time reference data. It then calls the loadController() to get data
 function firstPageLoad(){
    console.log("in replace data func");
    // use ajax to get the meal times

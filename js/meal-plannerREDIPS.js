@@ -1,4 +1,6 @@
+/* Paul Gauci s3529106 2016. 
 /* this is the REDIPS JS used on the mealplanner page */
+/* this script has come from the REDIPS website but has been modified here and there */
 
 
 /* enable strict mode */

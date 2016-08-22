@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+   // written by Paul Gauci s3529106 2016.
    // session stuff
    session_start();
 
@@ -107,7 +108,7 @@
       }
       echo "</div>";
    echo "</div>";
-   // returns back to the mealplan in a second
+   // returns back to the mealplan in a couple of seconds
    header("refresh:2; url=mealplan.php"); 
    
 ?>

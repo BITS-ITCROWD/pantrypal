@@ -1,6 +1,6 @@
 <!DOCTYPE html>
    <?php
-   
+   // written by Paul Gauci s3529106 2016. Please note my code contains REDIPS drag and drop, and JQueryUI
    session_start();
 
    // if not logged in go back to index page
@@ -29,7 +29,7 @@
    if ($result === FALSE){
       die(mysql_error());
    }
-   //create json
+   // create json for the mealplan from the db 
    $q = 0;
    //$row_array = array();
    $jfile = "files/mealplan-".$userID.".json";
@@ -43,7 +43,7 @@
    //file_put_contents($jfile,$jstring, FILE_APPEND);
    
    
-   // mealtime sql
+   // mealtime sql - get it from the db
    $mealQuery = "SELECT * FROM meal_time ORDER by ID";
    // test for a result
    $mealResult = $db->query($mealQuery);
@@ -52,7 +52,7 @@
    if ($mealResult === FALSE){
       die(mysql_error());
    }
-   //create json
+   //create json of mealtimes
    $r = 0;
    $jmealFile = "files/mealtime.json";
    // create an array of the sql result
@@ -89,10 +89,13 @@
       echo "<div class='container'>";
       include_once "sidebar.php";
       
+      //meal plan layout
       echo "<div class='col-sm-10' id='printable'>";
       echo "<h3>Meal Planner</h3>";
       
+      // create the form
       echo "<form id='form_planner' method='post' action='mealplan_savetotable.php'>";
+      // date info
       echo "<h4><span id = 'week-start-heading'>for the week starting: </span></h4>";
       echo "<input type='hidden' name='date' id='date' value=''>";
       echo "<input type='hidden' name='user' id='user' value='".$userID."'>";
@@ -104,7 +107,7 @@
       echo "<td class='redips-mark'><button type='button' class='nav button' id='back'>
             <span class='glyphicon glyphicon-triangle-left'></span>back</button></td>";
       // display todays date on the first load
-      $displayDate = date('d-m-Y',strtotime(Today));   
+      $displayDate = date('d-m-Y',strtotime(Today));  
       echo "<td class='redips-mark'>Select date:<p><input type='text' id='datepicker' value='$displayDate'</p></td>";
       echo "<td class='redips-mark'><button class='button' type='button' id='reset'>reset</button></td>";
       echo "<td class='redips-mark'><button class='button' type='button' id='list' onclick=\"seeMyList('mylist.php')\">view My List</td>";
@@ -116,9 +119,7 @@
       echo "</tr>";
       echo "</table>";
       
-      
-      
-      // create the current week planner headings
+      // create the current week planner headings (ie DAY of WEEK)
       echo "<table id ='week-day-heading'>";
       echo "<tr>";
       echo "<td class='redips-mark'>MEAL</td>";
@@ -151,10 +152,10 @@
       }
       echo "</tr>";
       echo "</table>";
-      echo "</div>";  // redips-drag div
+      echo "</div>";  // end of redips-drag div
       echo "</form>";
-      echo "</div>";  // col-sm-10 div
-      echo "</div>";  // container div
+      echo "</div>";  // end of col-sm-10 div
+      echo "</div>";  // end of container div
       
       include_once "footer.php"; 
    ?>
